@@ -143,11 +143,10 @@ class Read (Char) :
 
         if input_counter < len(input_string) :
             cell[pointer] = ord(input_string[input_counter])
+            input_counter += 1
         else :
             cell[pointer] = 0
 
-        input_counter += 1
- 
         return self.id
 
 
@@ -157,10 +156,13 @@ class Debug (Char) :
 
         global cell
         global pointer
+        global input_string
+        global input_counter
+        global output_string
         
-        print()
+        print
         print("--- DEBUG START ---")
-        # add: print position 0
+        
         print(cell)
         pointstr = " "
         for e in range(pointer) :
@@ -169,6 +171,14 @@ class Debug (Char) :
             pointstr += "  "
         pointstr += "^"
         print(pointstr)
+        
+        if bool(input_string) :
+            print("Input: " + input_string)
+            print("      " + input_counter * " " + "^")
+        
+        print("Output: " + output_string)
+        print("       " + len(output_string) * " " + "^")
+        
         print("---  DEBUG END  ---")
         try :
             raw_input()
@@ -320,7 +330,7 @@ def main (argdir) :
 
 
 
-parser = argparse.ArgumentParser(description = "Brainfuck interpreter script, works in Python 2.7 and above")
+parser = argparse.ArgumentParser(description = "Brainfuck interpreter script")
 
 parser.add_argument("-c", "--code", help = "Define the Brainfuck code directly, you can only use either -c or -f")
 parser.add_argument("-f", "--file", help = "Take Brainfuck code from a file, you can only use either -c or -f")
