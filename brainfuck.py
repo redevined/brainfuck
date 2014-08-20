@@ -1,349 +1,141 @@
 #!/usr/bin/env python
 
-import sys, os
+from __future__ import print_function
 import argparse
 
 
-
-# --- Classes ---
-
-
-
-class Char () :
-    
-    def __init__ (self, i) :
-
-        self.id = i
-
-
-class Incrementor (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-
-        if cell[pointer] < int(0x110000) :
-            cell[pointer] += 1
-        else :
-            cell[pointer] *= -1
-
-        return self.id
-
-
-class Decrementor (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-
-        if cell[pointer] > -1*int(0x110000) :
-            cell[pointer] -= 1
-        else :
-            cell[pointer] *= -1
-
-        return self.id
-
-
-class Right (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-
-        pointer += 1
-
-        if pointer >= len(cell) :
-
-            cell = cell + [0]
-
-        return self.id
-
-
-class Left (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-
-        pointer -= 1
-
-        if pointer < 0 :
-
-            cell = [0] + cell
-            pointer = 0
-
-        return self.id
-
-
-class Loop (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-        global loopdir
-
-        try :
-
-            end = loopdir[self.pos][1].id
-
-            if cell[pointer] == 0 :
-                return end
-            else :
-                return self.id
-
-        except IndexError :
-
-            print("--- Invalid use of loops ---")
-            sys.exit()
-
-
-class Endloop (Char) :
-    
-    def run (self) :
-
-        global cell
-        global pointer
-        global loopdir
-
-        if cell[pointer] == 0 :
-            return self.id
-        else :
-            return loopdir[self.pos][0].id
-
-
-class Output (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-        global output_string
-
-        val = cell[pointer] % int(0x110000)
-        
-        if val > 31 :
-            output_string += chr(val)
-
-        return self.id
-
-
-class Read (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-        global input_string
-        global input_counter
-
-        if input_counter < len(input_string) :
-            cell[pointer] = ord(input_string[input_counter])
-            input_counter += 1
-        else :
-            cell[pointer] = 0
-
-        return self.id
-
-
-class Debug (Char) :
-
-    def run (self) :
-
-        global cell
-        global pointer
-        global input_string
-        global input_counter
-        global output_string
-        
-        print
-        print("--- DEBUG START ---")
-        
-        print(cell)
-        pointstr = " "
-        for e in range(pointer) :
-            for i in range(len(str(cell[e]))) :
-                pointstr += " "
-            pointstr += "  "
-        pointstr += "^"
-        print(pointstr)
-        
-        if bool(input_string) :
-            print("Input: " + input_string)
-            print("      " + input_counter * " " + "^")
-        
-        print("Output: " + output_string)
-        print("       " + len(output_string) * " " + "^")
-        
-        print("---  DEBUG END  ---")
-        try :
-            raw_input()
-        except NameError :
-            input()
-
-        return self.id
-
-
-
-# --- Functions ---
-
-
-
-def scanner (source, debugging) :
-
-    i = 0
-
-    for line in source :
-
-        for char in line :
-
-            if char == "+" :
-                i += 1
-                yield Incrementor(i)
-
-            elif char == "-" :
-                i += 1
-                yield Decrementor(i)
-
-            elif char == ">" :
-                i += 1
-                yield Right(i)
-
-            elif char == "<" :
-                i += 1
-                yield Left(i)
-
-            elif char == "[" :
-                i += 1
-                yield Loop(i)
-
-            elif char == "]" :
-                i += 1
-                yield Endloop(i)
-
-            elif char == "." :
-                i += 1
-                yield Output(i)
-
-            elif char == "," :
-                i += 1
-                yield Read(i)
-
-            elif char == "#" and debugging :
-                i += 1
-                yield Debug(i)
-
-
-def appender (last) :
-        
-	global loopdir
-        
-	try :
-
-		if len(loopdir[last]) != 1 :
-			return appender(last-1)
+class Loops(dict) :
+	
+	def __init__(self, brackets) :
+		scope = 0
+		for (i, b) in brackets :
+			if b == "[" :
+				scope += 1
+				self[i] = scope
+			elif b == "]" :
+				ia = self.reverse()[scope]
+				self[ia] = i
+				scope -= 1
+	
+	def reverse(self) :
+		return dict(zip(self.values(), self.keys()))
+
+
+class Memory :
+	
+	def __init__(self) :
+		self.values = [0]
+		self.pointer = 0
+	
+	def inc(self, cpos) :
+		self.values[self.pointer] += 1
+		return cpos + 1
+	
+	def dec(self, cpos) :
+		self.values[self.pointer] -= 1
+		return cpos + 1
+	
+	def rshift(self, cpos) :
+		self.pointer += 1
+		if self.pointer >= len(self.values) :
+			self.values.append(0)
+		return cpos + 1
+	
+	def lshift(self, cpos) :
+		self.pointer -= 1
+		if self.pointer < 0 :
+			self.values.insert(0, 0)
+			self.pointer = 0
+		return cpos + 1
+	
+	def loop(self, cpos) :
+		if self.values[self.pointer] == 0 :
+			return self.loops[cpos] + 1
 		else :
-			return last
-
-	except IndexError :
-   
-		return None
-
-		
-
-# --- Main Function ---
-
-
-
-def main (argdir) :
-
-    global cell
-    cell = [0]
-
-    global pointer
-    pointer = 0
-
-    global output_string
-    output_string = ""
-
-    global input_string
-    input_string = argdir["input"]
-
-    global input_counter
-    input_counter = 0
-
-    global loopdir
-    loopdir = []
-
-    flow = []
-    
-    if bool(argdir["code"]) :
-		
-        code = argdir["code"]		
+			return cpos + 1
 	
-    else :
+	def endloop(self, cpos) :
+		if self.values[self.pointer] == 0 :
+			return cpos + 1
+		else :
+			return self.loops.reverse()[cpos] + 1
 	
-        if "/" in argdir["file"] :
+	def write(self, cpos) :
+		s = chr(self.values[self.pointer]) if self.values[self.pointer] in [9, 10, 13] + range(32, 127) else ""
+		print(s, end="")
+		return cpos + 1
+	
+	def read(self, cpos) :
+		try :
+			val = ord(self.inpt.next())
+		except StopIteration :
+			val = 0
+		self.values[self.pointer] = val
+		return cpos + 1
+	
+	def debug(self, cpos) :
+		print()
+		print(self)
+		raw_input("Continue ->\n")
+		return cpos + 1
+	
+	def __str__(self) :
+		s = map(str, self.values)
+		s[self.pointer] = "\033[92m" + s[self.pointer] + "\033[0m"
+		return "[ " + " | ".join(s) + " ]"
+			
+
+
+def parseArguments() :
+	
+	parser = argparse.ArgumentParser(description = "Brainfuck interpreter, written in Python 2.7")
+
+	parser.add_argument("-f", "--file", help = "Take Brainfuck code from a file, you can only use either -c or -f")
+	parser.add_argument("-c", "--code", help = "Define the Brainfuck code directly, you can only use either -c or -f")
+	parser.add_argument("-i", "--input", help = "Define the input for your Brainfuck programm", default = "")
+	parser.add_argument("--debug", help = "If enabled, a '#' in your Brainfuck code will pause the programm and display debug information", action = "store_true")
+
+	args = vars(parser.parse_args())
+	
+	if args["file"] :
+		args["code"] = open(args["file"]).read()
+	del(args["file"])
+	
+	return args
+
+
+def main(prog) :
+	
+	mem = Memory()
+	
+	controller = {
+		"+": mem.inc, "-": mem.dec,
+		">": mem.rshift, "<": mem.lshift,
+		"[": mem.loop, "]": mem.endloop,
+		".": mem.write, ",": mem.read
+	}
+	if prog["debug"] :
+		controller["#"] = mem.debug
+	
+	code = [char for char in prog["code"] if char in controller]
+	
+	mem.loops = Loops( char for char in enumerate(code) if char[1] in "[]" )
+	mem.inpt = (char for char in prog["input"])
+	
+	pos = 0
+	
+	while pos < len(code) :
 		
-            code = open(argdir["file"])
-            
-        else :
-		
-            code = open(os.path.join(argdir["file"]))
- 
-    for element in scanner(code, argdir["debug"]) :
-        
-        if element.__class__.__name__ == "Loop" :
-
-            pos = len(loopdir)
-
-            loopdir.append([element])
-            element.pos = pos
-
-        elif element.__class__.__name__ == "Endloop" :
-
-            pos = appender(len(loopdir)-1)
-
-            try :
-
-                loopdir[pos].append(element)
-                element.pos = pos
-
-            except TypeError :
-
-                print("--- Invalid use of loops ---")
-                sys.exit()
-
-        flow.append(element)
-
-    i = 0
-
-    while i < len(flow) :
-
-        i = flow[i].run()
-
-    print(output_string)
+		pos = controller[code[pos]](pos)
+	
+	print()
 
 
+if __name__ == "__main__" :
+	args = parseArguments()
+	try :
+		main(args)
+	except Exception :
+		raise SyntaxError("Invalid syntax")
 
-parser = argparse.ArgumentParser(description = "Brainfuck interpreter script")
 
-parser.add_argument("-c", "--code", help = "Define the Brainfuck code directly, you can only use either -c or -f")
-parser.add_argument("-f", "--file", help = "Take Brainfuck code from a file, you can only use either -c or -f")
-parser.add_argument("-i", "--input", help = "Define the input for your Brainfuck programm", default = "")
-parser.add_argument("--debug", help = "If enabled, a '#' in your Brainfuck code will pause the programm and display debug information", action = "store_true")
-
-args = parser.parse_args()
-
-if bool(args.code) ^ bool(args.file) :
-
-	if __name__ == "__main__" :
-		main(vars(args))
-    	
-else :
-
-	parser.error("Please make sure to use only one of the -c or -f flags")
