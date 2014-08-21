@@ -74,7 +74,7 @@ def getPars(code) :
 
 def main(prog) :
 	
-	code = prog #open(prog).read()
+	code = open(prog).read()
 	
 	if "//" in code :
 		dec, code = code.split("//", 2)
@@ -103,12 +103,12 @@ def main(prog) :
 	
 	code = str().join(char for char in code if char in "+-><[],.#")
 	
-	print code	
+	return code	
 
 
 if __name__ == "__main__" :
 	try :
-		main(sys.argv[1])
+		print main(sys.argv[1])
 	except Exception :
 		raise SyntaxError("Invalid syntax")
 

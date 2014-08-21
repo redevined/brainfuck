@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys, random
+import convertToBF
 
 
 class Loops(dict) :
@@ -39,7 +40,7 @@ class Memory :
 		return "[ " + " | ".join(s) + " ]"
 	
 	def inc(self, c, cpos) :
-		self.values[self.pointers[c]] += 1 - 2*c
+		self.values[self.pointers[c]] += 1
 		if self.values[self.pointers[c]] > 128 :
 			self.values[self.pointers[c]] = -127
 		elif self.values[self.pointers[c]] < -127 :
@@ -47,7 +48,7 @@ class Memory :
 		return cpos + 1
 	
 	def dec(self, c, cpos) :
-		self.values[self.pointers[c]] -= 1 - 2*c
+		self.values[self.pointers[c]] -= 1
 		if self.values[self.pointers[c]] > 128 :
 			self.values[self.pointers[c]] = -127
 		elif self.values[self.pointers[c]] < -127 :
@@ -78,11 +79,14 @@ class Memory :
 		return cpos + 1
 
 
-def finished(mem, i) :
+def finished(mem, i, clear = [[False, False]]) :
 	
 	timeout = i >= 100000
-	win = [mem.values[t*-1] == 0 or mem.pointers[t] not in range(len(mem.values)) for t in (1, 0)]
+	
+	win = [clear[0][t] and mem.values[t*-1] == 0 or mem.pointers[t] not in range(len(mem.values)) for t in (1, 0)]
 	better = [abs(mem.values[t*-1]) > abs(mem.values[t-1]) for t in (0, 1)]
+	
+	clear[0] = [mem.values[t] == 0 for t in (0, -1)]
 	
 	if all(win) or timeout and not any(better) :
 		print "\033[93mDraw\033[0m game."
@@ -100,9 +104,9 @@ def finished(mem, i) :
 		return False
 
 
-def main(progs) :
+def main(progs, convert) :
 	
-	mem = Memory(random.randint(10, 20))
+	mem = Memory(random.randint(10, 30))
 	
 	controller = {
 		"+": mem.inc, "-": mem.dec,
@@ -111,16 +115,19 @@ def main(progs) :
 		".": mem.defer
 	}
 	
-	codes = [ [char for char in open(prog).read() if char in controller] + ["."]*100000 for prog in progs ]
+	getCode = lambda c : convertToBF.main(c) if convert else open(c).read()
+	codes = [ [char for char in getCode(prog) if char in controller] for prog in progs ]
+	
 	mem.loops = [Loops( char for char in enumerate(code) if char[1] in "[]" ) for code in codes]
 	
 	cycle = 0
 	pos = [0, 0]
+	print mem
 	
 	while not finished(mem, cycle) :
 		
 		order = (0, 1)
-		instr = [codes[i][pos[i]] for i in order]
+		instr = [codes[i][pos[i]] if pos[i] < len(codes[i]) else "." for i in order]
 		
 		if instr[1] in "[]" :
 			order = (1, 0)
@@ -132,8 +139,10 @@ def main(progs) :
 
 
 if __name__ == "__main__" :
+	
 	try :
-		main(sys.argv[1:3])
+		main(sys.argv[1:3], "-c" in sys.argv) #TODO
+	
 	except Exception :
 		raise SyntaxError("Invalid syntax")
 
