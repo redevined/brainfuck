@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, random
+import sys, random, argparse
 import convertToBF
 
 
@@ -21,12 +21,13 @@ class Loops(dict) :
 		return dict(zip(self.values(), self.keys()))
 
 
+
 class Memory :
 	
 	def __init__(self, size) :
 		self.values = [0] * size
 		self.values[0], self.values[-1] = 128, 128
-		self.pointers = [0, len(self.values)-1]
+		self.pointers = [0, size-1]
 		self.loops = []
 	
 	def __str__(self) :
@@ -57,10 +58,14 @@ class Memory :
 	
 	def rshift(self, c, cpos) :
 		self.pointers[c] += 1 - 2*c
+		if self.pointers[c] >= len(self.values) :
+			self.pointers[c] = -len(self.values)
 		return cpos + 1
 	
 	def lshift(self, c, cpos) :
 		self.pointers[c] -= 1 - 2*c
+		if self.pointers[c] >= len(self.values) :
+			self.pointers[c] = -len(self.values)
 		return cpos + 1
 	
 	def loop(self, c, cpos) :
@@ -79,9 +84,35 @@ class Memory :
 		return cpos + 1
 
 
-def finished(mem, i, clear = [[False, False]]) :
+
+def parseArguments() :
 	
-	timeout = i >= 100000
+	parser = argparse.ArgumentParser(description = "Arena program for the BrainFuckedBotsForBattling contest")
+
+	parser.add_argument("programs",
+		help = "The names of the two competing programs",
+		nargs = 2)
+	parser.add_argument("-c", "--convert",
+		help = "Convert advanced syntax Bf-programs to regular Brainfuck",
+		action = "store_true")
+	parser.add_argument("-m", "--memory-size",
+		help = "Select the size of the memory tape, defaults to random number in [10, 30]",
+		type = int,
+		default = random.randint(10, 30))
+	parser.add_argument("-t", "--timeout",
+		help = "The number of cycles to complete before the game is considered a draw",
+		type = int,
+		default = 100000)
+
+	args = parser.parse_args()
+	
+	return vars(args)
+
+
+
+def finished(mem, c, clear = [[False, False]]) :
+	
+	timeout = c >= args["timeout"]
 	
 	win = [clear[0][t] and mem.values[t*-1] == 0 or mem.pointers[t] not in range(len(mem.values)) for t in (1, 0)]
 	better = [abs(mem.values[t*-1]) > abs(mem.values[t-1]) for t in (0, 1)]
@@ -89,25 +120,24 @@ def finished(mem, i, clear = [[False, False]]) :
 	clear[0] = [mem.values[t] == 0 for t in (0, -1)]
 	
 	if all(win) or timeout and not any(better) :
-		print "\033[93mDraw\033[0m game."
+		print "\n===== \033[93mDraw\033[0m game ====="
 		return True
 	
-	elif win[0] or timeout and better[0] :
-		print "\033[91mBot1\033[0m won the battle!"
-		return True
+	for i in (0, 1) :
+		if win[i] or timeout and better[i] :
+			print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["programs"][i].rsplit(".", 1)[0], c)
+			return True
 	
-	elif win[1] or timeout and better[1] :
-		print "\033[92mBot2\033[0m won the battle!"
-		return True
-	
-	else :
-		return False
+	return False
 
 
-def main(progs, convert) :
+
+def main(params) :
 	
-	mem = Memory(random.randint(10, 30))
+	# Initialize the memory tape
+	mem = Memory(params["memory_size"])
 	
+	# Dictionary for translating Brainfuck code instructions into actions on the memory
 	controller = {
 		"+": mem.inc, "-": mem.dec,
 		">": mem.rshift, "<": mem.lshift,
@@ -115,35 +145,47 @@ def main(progs, convert) :
 		".": mem.defer
 	}
 	
-	getCode = lambda c : convertToBF.main(c) if convert else open(c).read()
-	codes = [ [char for char in getCode(prog) if char in controller] for prog in progs ]
+	# Get the code of the programs (and convert extended Brainfuck to Brainfuck if necessary)
+	getCode = lambda c : convertToBF.main(c) if params["convert"] else open(c).read()
+	codes = [ [char for char in getCode(prog) if char in controller] for prog in params["programs"] ]
 	
+	# Find matching loops and create dictionary inside the memory instance
 	mem.loops = [Loops( char for char in enumerate(code) if char[1] in "[]" ) for code in codes]
 	
+	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *[name.rsplit(".", 1)[0] for name in params["programs"]])
+	
+	# Get ready to rumble!
 	cycle = 0
 	pos = [0, 0]
 	print mem
 	
+	# Loop while none of the finishing conditions is  reached
 	while not finished(mem, cycle) :
 		
+		# Get the next instructions
 		order = (0, 1)
 		instr = [codes[i][pos[i]] if pos[i] < len(codes[i]) else "." for i in order]
 		
-		if instr[1] in "[]" :
-			order = (1, 0)
-		for i in order :
+		# Revert instructions order if second instruction is a loop (checks for 0s have to be executed before increments/decrements)
+		for i in order[::-2*(instr[1] in "[]")+1] :
+			
+			# Execute action on the tape and calculate new position of the instructions pointer
 			pos[i] = controller[instr[i]](i, pos[i])
 		
-		print mem
+		# Increment cycle counter
 		cycle += 1
+		print mem
+
 
 
 if __name__ == "__main__" :
 	
-	try :
-		main(sys.argv[1:3], "-c" in sys.argv) #TODO
+	args = parseArguments()
 	
-	except Exception :
-		raise SyntaxError("Invalid syntax")
+	#try :
+	main(args)
+	
+	#except Exception :
+	#	raise SyntaxError("Invalid syntax")
 
 
