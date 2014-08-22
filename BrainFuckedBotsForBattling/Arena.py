@@ -182,10 +182,10 @@ if __name__ == "__main__" :
 	
 	args = parseArguments()
 	
-	#try :
-	main(args)
+	try :
+		main(args)
 	
-	#except Exception :
-	#	raise SyntaxError("Invalid syntax")
+	except Exception :
+		raise SyntaxError("Invalid syntax")
 
 
