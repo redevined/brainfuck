@@ -1,7 +1,7 @@
 BrainFuckedBotsForBattling - A Brainfuck Tournament
 ===================================================
 
-All bots at the battle arena suddenly got brainfucked and no one can explain why. But who cares as long as they are still able to fight - although Brainfuck is the only programming language they understand anymore.
+All bots at the battle arena suddenly got brainfucked and no one can explain why. But who cares as long as they are still able to fight - although Brainfuck is the only language they understand anymore.
 
 ---
 
@@ -37,7 +37,7 @@ Winning conditions
 
 Your bot wins under one of the following conditions:
 * Your enemy's flag is zeroed before yours
-* Your enemy moves his pointer out of the tape (executes '>' on your flag or '<' on his own)
+* Your enemy moves his pointer out of the tape (executes `>` on your flag or `<` on his own)
 * Your flag's value is more far away from 0 than the value of your opponent's flag after 100000 cycles
 
 ---
@@ -46,11 +46,13 @@ Rules
 -----
 
 Your post should contain a name for your bot and its code.
+
 * You can use the following abbreviation syntax to make your code more readable:
-* * E.g. `(+)*4` is the same as `++++`, this is valid for any instruction (also '[' and ']')
-* Every other character than '+-><[].' is a comment and therefore ignored, except '()*' for abbreviations
+ * E.g. `(+)*4` is the same as `++++`, this is valid for any instruction (also `[` and `]`)
+* Every other character than `+-><[].` is a comment and therefore ignored, except `()*` for abbreviations
 
 Bots which do not follow the rules will excluded from the tournament.
+
 * Only basic Brainfuck is allowed, no other variants which supports procedures or arithmetic operations
 * Your bot's source code should not contain unmatched brackets
 
@@ -70,10 +72,10 @@ A draw results in no points for this match.
 Control program
 ---------------
 
-You can find the control program on github, along with the full logs from the battles.
+You can find the [control program](https://github.com/redevined/brainfuck/tree/master/BrainFuckedBotsForBattling) on github, along with the full logs from the battles.
 The leaderboard will be posted here once it is generated.
 
-Feel free to clone the repo and try your bot against the others on your own. Use `python Arena.py yourbot.bf otherbot.bf -c` to run a match. You can modify the conditions with the command-line flags `-m` and `-t`.
+Feel free to clone the repository and try your bot against the others on your own. Use `python Arena.py yourbot.bf otherbot.bf -c` to run a match. You can modify the conditions with the command-line flags `-m` and `-t`.
 
 ---
 
@@ -98,4 +100,4 @@ DecoyBot.bf
 	.			Wait one round, in case it is the enemy's flag
 	)*21		Repeat this 21 times
 
-The DecoyBot will win every match with a tape length greater than zero, since the FastClearBot can avoid the small decoys, but not the larger ones. The only situation in which the FastClearBot can win against DecoyBot, is when it is fast enough to reach the enemy's flag before he has build up large decoys.
+The DecoyBot will win every match with a tape length greater than ten, since the FastClearBot can avoid the small decoys, but not the larger ones. The only situation in which the FastClearBot can win against DecoyBot, is when it is fast enough to reach the enemy's flag before his opponent has built up large decoys.
