@@ -9,11 +9,12 @@ You can find a deeper explanation along with several examples on [Wikipedia](htt
 Usage
 -----
 
-`python ./brainfuck.py [-h] [-c CODE|-f FILE] [--debug]`
+`python ./brainfuck.py [-h] [-c CODE|-f FILE] [-i INPUT] [--debug]`
 
 * `-h`      Display a help message and exits.  
 * `-c`      Lets you write brainfuck code directly into the terminal. Cannot be used with -f.  
-* `-f`      The programm takes the code from an external file with text-based format. Please write the absolute path to this file or store it in the same directory as brainfuck.py. Cannot be used with -c.  
+* `-f`      The programm takes the code from an external file with text-based format. Please write the absolute path to this file or store it in the same directory as brainfuck.py. Cannot be used with -c. 
+* `-i`      Define the input for your program.
 * `--debug` If enabled, a '#' in your brainfuck code will pause to running programm and display useful debugging information.
 
 
