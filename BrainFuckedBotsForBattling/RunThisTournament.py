@@ -6,22 +6,21 @@ from subprocess import check_output as capture
 
 def generateScoreboard(owners, scores) :
 	
-	bots_len = max(map(len, owner.keys())) - 3
-	owners_len = max(map(len, owner.values()))
+	bots_len = max(map(len, owners.keys())) - 3
+	owners_len = max(map(len, owners.values()))
 	
-	s = "    +-{}---{}--- Score -+\n".format(" Owner ".center(owners_len, "-"), " Bot ".center(bots_len, "-"))
+	s = "    | {} | {}   Score |\n".format("Owner".center(owners_len), "Bot".center(bots_len))
+	s += "    |-" + "-"*owners_len + "-|-" + "-"*bots_len + "---------|\n"
 	
 	for score, bot in sorted(zip(scores.values(), scores.keys())) :
-		s += "    | {} | {} - {}   |\n".format(owners[bot].center(owners_len), bot.rsplit(".", 1)[0].center(bots_len), score.rjust(3))
-	
-	s += "    +" + "-"*(bots_len+owners_len+15) + "+\n"
+		s += "    | {} | {} -  {}  |\n".format(owners[bot].center(owners_len), bot.rsplit(".", 1)[0].center(bots_len), str(score).ljust(3))
 	
 	return s
 
 
 def main() :
 	
-	bots = dict( line.split(" ") for line in open("botlist.txt").readlines() )
+	bots = dict( line.strip("\n").split(" ") for line in open("botlist.txt").readlines() )
 	scores = { key: 0 for key in bots }
 	
 	for fighters in itertools.combinations(bots, 2) :
