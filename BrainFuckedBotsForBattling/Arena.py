@@ -24,20 +24,25 @@ class Loops(dict) :
 
 class Memory :
 	
-	def __init__(self, size) :
+	def __init__(self, size, no_color) :
 		self.values = [0] * size
 		self.values[0], self.values[-1] = 128, 128
 		self.pointers = [0, size-1]
 		self.loops = []
+		self.no_color = no_color
 	
 	def __str__(self) :
 		s = map(str, self.values)
 		p = self.pointers
-		if p[0] == p[1] :
-			s[p[0]] = "\033[93m" + s[p[0]] + "\033[0m"
+		if not self.no_color :
+			if p[0] == p[1] :
+				s[p[0]] = "\033[93m" + s[p[0]] + "\033[0m"
+			else :
+				s[p[0]] = "\033[91m" + s[p[0]] + "\033[0m"
+				s[p[1]] = "\033[92m" + s[p[1]] + "\033[0m"
 		else :
-			s[p[0]] = "\033[91m" + s[p[0]] + "\033[0m"
-			s[p[1]] = "\033[92m" + s[p[1]] + "\033[0m"
+			s[p[0]] = ">" + s[p[0]]
+			s[p[1]] = s[p[1]] + "<"
 		return "[ " + " | ".join(s) + " ]"
 	
 	def inc(self, c, cpos) :
@@ -102,7 +107,10 @@ def parseArguments() :
 	parser.add_argument("-t", "--timeout",
 		help = "The number of cycles to complete before the game is considered a draw",
 		type = int,
-		default = 100000)
+		default = 10000)
+	parser.add_argument("--no-color",
+		help = "Disable colored output",
+		action = "store_true")
 
 	args = parser.parse_args()
 	
@@ -120,12 +128,18 @@ def finished(mem, c, clear = [[False, False]]) :
 	clear[0] = [mem.values[t] == 0 for t in (0, -1)]
 	
 	if all(win) or timeout and not any(better) :
-		print "\n===== \033[93mDraw\033[0m game ====="
+		if not args["no_color"] :
+			print "\n===== \033[93mDraw\033[0m game ====="
+		else :
+			print "\n===== Draw game ====="
 		return True
 	
 	for i in (0, 1) :
 		if win[i] or timeout and better[i] :
-			print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["programs"][i].rsplit(".", 1)[0], c)
+			if not args["no_color"] :
+				print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["programs"][i].rsplit("/")[-1].rsplit(".", 1)[0], c)
+			else :
+				print "\n===== {} won the battle after {} cycles =====".format(args["programs"][i].rsplit("/")[-1].rsplit(".", 1)[0], c)
 			return True
 	
 	return False
@@ -135,7 +149,7 @@ def finished(mem, c, clear = [[False, False]]) :
 def main(params) :
 	
 	# Initialize the memory tape
-	mem = Memory(params["memory_size"])
+	mem = Memory(params["memory_size"], params["no_color"])
 	
 	# Dictionary for translating Brainfuck code instructions into actions on the memory
 	controller = {
@@ -152,7 +166,7 @@ def main(params) :
 	# Find matching loops and create dictionary inside the memory instance
 	mem.loops = [Loops( char for char in enumerate(code) if char[1] in "[]" ) for code in codes]
 	
-	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *[name.rsplit(".", 1)[0] for name in params["programs"]])
+	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *[name.rsplit("/")[-1].rsplit(".", 1)[0] for name in params["programs"]])
 	
 	# Get ready to rumble!
 	cycle = 0

@@ -82,7 +82,7 @@ def main(prog) :
 		
 		code = applyDecs(dec, code)
 	
-	code = [char for char in code if char in "+-><[],.#()*0123456789"] + ["EOF"]
+	code = [char for char in code] + ["EOF"]
 	
 	while "(" in code :
 		pars = getPars(code)

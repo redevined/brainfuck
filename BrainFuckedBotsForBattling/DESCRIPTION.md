@@ -5,6 +5,17 @@ All bots at the battle arena suddenly got brainfucked and no one can explain why
 
 ---
 
+Scoreboard
+----------
+
+_Scores from 23.08.2014_
+
+__EDIT1__: Fixed a bug in the convert script causing the interpreter to not ignore numbers in commented programs.
+
+__EDIT2__: Since it caused an arcane runtime on my quite slow computer, I reduced the timeout limit from 100000 cycles to 10000 cycles. Not that anyone has turned the resultof a running game beyond this point anyway. If your bot has a strategy which requires a higher limit, please just start complaining ^^
+
+---
+
 Description
 -----------
 
