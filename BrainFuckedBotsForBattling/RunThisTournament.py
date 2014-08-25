@@ -12,8 +12,8 @@ def generateScoreboard(owners, scores) :
 	s = "    | {} | {}   Score |\n".format("Owner".center(owners_len), "Bot".center(bots_len))
 	s += "    |-" + "-"*owners_len + "-|-" + "-"*bots_len + "---------|\n"
 	
-	for score, bot in sorted(zip(scores.values(), scores.keys())) :
-		s += "    | {} | {} -  {}  |\n".format(owners[bot].center(owners_len), bot.rsplit(".", 1)[0].center(bots_len), str(score).ljust(3))
+	for score, bot in sorted(zip(scores.values(), scores.keys()))[::-1] :
+		s += "    | {} | {} -  {}  |\n".format(owners[bot].ljust(owners_len), bot.rsplit(".", 1)[0].ljust(bots_len), str(score).ljust(3))
 	
 	return s
 
