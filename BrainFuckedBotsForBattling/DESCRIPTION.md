@@ -10,34 +10,58 @@ Scoreboard
 
     |       Owner        |         Bot           Score |
     |--------------------|-----------------------------|
-    | DLosc              | LightfootPlodder    -  169  |
-    | DLosc              | Plodder             -  160  |
-    | PhiNotPi           | RandomOscillator    -  156  |
-    | kaine              | SternBot            -  151  |
-    | Moop               | Alternator          -  124  |
-    | TestBot            | DecoyBot            -  117  |
-    | Geobits            | Backtracker         -  111  |
-    | IngoBuerk          | Geronimo            -  104  |
-    | plannapus          | CleanUpOnAisleSix   -  100  |
-    | TestBot            | FastClearBot        -  98   |
-    | isaacg             | CleverAndDetermined -  83   |
-    | flawr              | CropCircleBot       -  75   |
-    | IngoBuerk          | Gambler             -  64   |
-    | PhiNotPi           | CloakingDeviceBot   -  64   |
-    | kaine              | BestOffense         -  64   |
-    | DLosc              | ScaredyBot          -  60   |
-    | Moop               | StubbornBot         -  54   |
-    | BetaDecay          | RussianRoulette     -  44   |
-    | mmphilips          | PacifistBot         -  40   |
-    | SebastianLamerichs | Dumbot              -  40   |
-    | SeanD              | DontUnderstand      -  33   |
-    | proudHaskeller     | PatientBot          -  9    |
+    | Sylwester          | BurlyBalder         -  356  |
+    | Comintern          | CounterPunch        -  352  |
+    | IstvanChung        | Bigger              -  341  |
+    | AndoDaan           | BeatYouMate         -  332  |
+    | MikaLammi          | WallE               -  317  |
+    | ccarton            | AnybodyThere        -  303  |
+    | Sparr              | SeeSawRush          -  302  |
+    | kaine              | SternBot            -  289  |
+    | PhiNotPi           | EvoBot2             -  288  |
+    | PhiNotPi           | RandomOscillator    -  273  |
+    | Sylwester          | TerribleThor        -  269  |
+    | Nax                | TruthBot            -  267  |
+    | DLosc              | LightfootPlodder    -  267  |
+    | DLosc              | Plodder             -  265  |
+    | PhiNotPi           | EvoBot1             -  263  |
+    | MikaLammi          | PolarBear           -  236  |
+    | Moop               | Alternator          -  232  |
+    | TestBot            | DecoyBot            -  218  |
+    | Geobits            | Backtracker         -  208  |
+    | TestBot            | FastClearBot        -  202  |
+    | Sylwester          | ReluctantRan        -  197  |
+    | frederick          | 128Bot              -  195  |
+    | IngoBuerk          | Geronimo            -  182  |
+    | plannapus          | CleanUpOnAisleSix   -  158  |
+    | PhiNotPi           | CloakingDeviceBot   -  157  |
+    | flawr              | CropCircleBot       -  154  |
+    | kaine              | BestOffense         -  141  |
+    | PhiNotPi           | CantTouchThis       -  137  |
+    | isaacg             | CleverAndDetermined -  135  |
+    | DLosc              | ScaredyBot          -  125  |
+    | AndoDaan           | GetOffMate          -  125  |
+    | Moop               | StubbornBot         -  122  |
+    | IngoBuerk          | Gambler             -  110  |
+    | BetaDecay          | RussianRoulette     -  103  |
+    | flawr              | DoNothingBot        -  103  |
+    | mmphilips          | PacifistBot         -  101  |
+    | SebastianLamerichs | Dumbot              -  99   |
+    | SeanD              | DontUnderstand      -  76   |
+    | Darkgamma          | TheRetard           -  69   |
+    | frederick          | Dumberbot           -  62   |
+    | proudHaskeller     | PatientBot          -  60   |
+    | flawr              | MetaJSRandomBot     -  54   |
+    | BetaDecay          | PrussianRoulette    -  28   |
+    | frederick          | Dumbestbot          -  0    |
 
-_Scores from 23.08.2014_
+_Scores from 25.08.2014_
 
 __EDIT1__: Fixed a bug in the convert script causing the interpreter to not ignore numbers in commented programs.
 
 __EDIT2__: Since it caused an arcane runtime on my quite slow computer, I reduced the timeout limit from 100000 cycles to 10000 cycles. Not that anyone has turned the resultof a running game beyond this point anyway. If your bot has a strategy which requires a higher limit, please just start complaining ^^
+
+__EDIT3__: Removed comments in bf programs, due to an unexpected result, should be fixed now. If anyone has a problem with removing his comments, please report. I haven't found the time to revise the interpreter for treating abbreviations himself, will do this in future round.
 
 ---
 
@@ -64,7 +88,7 @@ Each bot starts at his own flag, which is cell [0] from his own perspective. The
 	   ^											 ^
 	my bot										 other bot
 
-Both bots execute their action simultaneously, this is considered one cycle. The game ends after 100000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
+Both bots execute their action simultaneously, this is considered one cycle. The game ends after 10000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
 
 ---
 
@@ -74,7 +98,7 @@ Winning conditions
 Your bot wins under one of the following conditions:
 * Your enemy's flag is zeroed before yours
 * Your enemy moves his pointer out of the tape (executes `>` on your flag or `<` on his own)
-* Your flag's value is more far away from 0 than the value of your opponent's flag after 100000 cycles
+* Your flag's value is more far away from 0 than the value of your opponent's flag after 10000 cycles
 
 ---
 
