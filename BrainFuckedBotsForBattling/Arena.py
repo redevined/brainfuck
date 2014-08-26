@@ -1,28 +1,9 @@
 #!/usr/bin/env python
 
-import sys, random, argparse
-import convertToBF
+import re, random, argparse
 
 
-class Loops(dict) :
-	
-	def __init__(self, brackets) :
-		scope = 0
-		for (i, b) in brackets :
-			if b == "[" :
-				scope += 1
-				self[i] = scope
-			elif b == "]" :
-				ia = self.reverse()[scope]
-				self[ia] = i
-				scope -= 1
-	
-	def reverse(self) :
-		return dict(zip(self.values(), self.keys()))
-
-
-
-class Memory :
+class Memory(object) :
 	
 	def __init__(self, size, no_color) :
 		self.values = [0] * size
@@ -75,7 +56,7 @@ class Memory :
 	
 	def loop(self, c, cpos) :
 		if self.values[self.pointers[c]] == 0 :
-			return self.loops[c][cpos] + 1
+			return self.loops[c][1][cpos] + 1
 		else :
 			return cpos + 1
 	
@@ -83,10 +64,66 @@ class Memory :
 		if self.values[self.pointers[c]] == 0 :
 			return cpos + 1
 		else :
-			return self.loops[c].reverse()[cpos] + 1
+			return self.loops[c][0][cpos] + 1
 	
 	def defer(self, c, cpos) :
 		return cpos + 1
+
+
+
+class Code(object) :
+	
+	def __init__(self, prog) :
+		self.code = [ char for char in open(prog).read() if char in "+-><[].()*0123456789" ]
+		self.pos = 0
+		self.parens = self.matchBraces("(", ")")
+		self.counters = {}
+	
+	def __str__(self) :
+		return str().join(self.code)
+	
+	def __getitem__(self, index) :
+		if index < len(self.code) :
+			return self.code[index]
+		else :
+			return "."
+	
+	def __setitem__(self, index, val) :
+		self.code[index] = val
+	
+	def matchBraces(self, opn, cls) :
+		braces = {}
+		rbraces = lambda : dict(zip(braces.values(), braces.keys()))
+		scope = 0
+		for (i, char) in enumerate(self.code) :
+			if char == opn :
+				scope += 1
+				braces[i] = scope
+			elif char == cls :
+				ia = rbraces()[scope]
+				braces[ia] = i
+				scope -= 1
+		return rbraces(), braces
+		
+	def get(self, pos) :
+		t = self[pos]
+		if t == "(" :	
+			if not self.counters.has_key(pos) :
+				m = [ it for it in re.compile(r"\)\*(\d+)").finditer(str(self)) if it.start() == self.parens[1][pos] ][0]
+				c = int(m.group(1))
+				self.counters[pos] = [c, m.end()]
+			if self.counters[pos][0] > 0 :
+				self.counters[pos][0] -= 1
+				return self.get(pos+1)
+			else :
+				end = self.counters[pos][1]
+				del(self.counters[pos])
+				return self.get(end)
+		elif t == ")" :
+			return self.get(self.parens[0][pos])
+		else :
+			self.pos = pos
+			return t
 
 
 
@@ -97,9 +134,6 @@ def parseArguments() :
 	parser.add_argument("programs",
 		help = "The names of the two competing programs",
 		nargs = 2)
-	parser.add_argument("-c", "--convert",
-		help = "Convert advanced syntax Bf-programs to regular Brainfuck",
-		action = "store_true")
 	parser.add_argument("-m", "--memory-size",
 		help = "Select the size of the memory tape, defaults to random number in [10, 30]",
 		type = int,
@@ -137,9 +171,9 @@ def finished(mem, c, clear = [[False, False]]) :
 	for i in (0, 1) :
 		if win[i] or timeout and better[i] :
 			if not args["no_color"] :
-				print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["programs"][i].rsplit("/")[-1].rsplit(".", 1)[0], c)
+				print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["names"][i], c)
 			else :
-				print "\n===== {} won the battle after {} cycles =====".format(args["programs"][i].rsplit("/")[-1].rsplit(".", 1)[0], c)
+				print "\n===== {} won the battle after {} cycles =====".format(args["names"][i], c)
 			return True
 	
 	return False
@@ -151,7 +185,7 @@ def main(params) :
 	# Initialize the memory tape
 	mem = Memory(params["memory_size"], params["no_color"])
 	
-	# Dictionary for translating Brainfuck code instructions into actions on the memory
+	# Interface between code and memory
 	controller = {
 		"+": mem.inc, "-": mem.dec,
 		">": mem.rshift, "<": mem.lshift,
@@ -160,31 +194,25 @@ def main(params) :
 	}
 	
 	# Get the code of the programs (and convert extended Brainfuck to Brainfuck if necessary)
-	getCode = lambda c : convertToBF.main(c) if params["convert"] else open(c).read()
-	codes = [ [char for char in getCode(prog) if char in controller] for prog in params["programs"] ]
+	codes = [ Code(prog) for prog in params["programs"] ]
 	
-	# Find matching loops and create dictionary inside the memory instance
-	mem.loops = [Loops( char for char in enumerate(code) if char[1] in "[]" ) for code in codes]
+	# Find matching loops and create dictionaries inside the memory instance
+	mem.loops = [code.matchBraces("[", "]") for code in codes]
 	
-	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *[name.rsplit("/")[-1].rsplit(".", 1)[0] for name in params["programs"]])
+	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"])
 	
 	# Get ready to rumble!
 	cycle = 0
-	pos = [0, 0]
 	print mem
 	
 	# Loop while none of the finishing conditions is  reached
 	while not finished(mem, cycle) :
 		
-		# Get the next instructions
-		order = (0, 1)
-		instr = [codes[i][pos[i]] if pos[i] < len(codes[i]) else "." for i in order]
-		
-		# Revert instructions order if second instruction is a loop (checks for 0s have to be executed before increments/decrements)
-		for i in order[::-2*(instr[1] in "[]")+1] :
+		for code in codes :
+			code.instr = code.get(code.pos)
 			
-			# Execute action on the tape and calculate new position of the instructions pointer
-			pos[i] = controller[instr[i]](i, pos[i])
+		for code in codes[::-2*(codes[1].instr in "[]")+1] :
+			code.pos = controller[code.instr](codes.index(code), code.pos)
 		
 		# Increment cycle counter
 		cycle += 1
@@ -195,11 +223,12 @@ def main(params) :
 if __name__ == "__main__" :
 	
 	args = parseArguments()
-	
-	try :
-		main(args)
-	
-	except Exception :
-		raise SyntaxError("Invalid syntax")
+	args["names"] = [name.rsplit("/")[-1].rsplit(".", 1)[0] for name in args["programs"]]
+	main(args)
+#	try :
+#		main(args)
+#	
+#	except Exception :
+#		raise SyntaxError("Invalid syntax")
 
 

@@ -25,7 +25,7 @@ def main() :
 	
 	for fighters in itertools.combinations(bots, 2) :
 		
-		cmd = ["python", "Arena.py", "bots/" + fighters[0], "bots/" + fighters[1], "-c", "--no-color"]
+		cmd = ["python", "Arena.py", "bots/" + fighters[0], "bots/" + fighters[1], "--no-color"]
 		results = [ capture(cmd).split("\n") for i in range(10) ]
 		score = [len([True for match in results if fighter.rsplit(".", 1)[0] in match[-2]]) for fighter in fighters]
 		
