@@ -1,7 +1,34 @@
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 11 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 30 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== Plodder won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 15 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== Plodder won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 10 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== Plodder won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 21 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 
@@ -16,73 +43,46 @@
 
 
 
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 30 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 23 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== Plodder won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 24 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 24 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 21 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== Plodder won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 28 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 30 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 10 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== Plodder won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 11 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 22 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 10 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 30 =====
+===== Starting battle of <Plodder> vs <Dumbestbot> with memory tape size: 12 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== Plodder won the battle after 1 cycles =====
 

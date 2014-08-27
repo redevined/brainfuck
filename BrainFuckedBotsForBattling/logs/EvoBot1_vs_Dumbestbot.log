@@ -1,25 +1,7 @@
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 26 =====
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 16 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== EvoBot1 won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 14 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== EvoBot1 won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 18 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== EvoBot1 won the battle after 1 cycles =====
 
@@ -29,24 +11,6 @@
 
 [ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
 [ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== EvoBot1 won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 18 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
-
-===== EvoBot1 won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 12 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== EvoBot1 won the battle after 1 cycles =====
 
@@ -70,19 +34,55 @@
 
 
 
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 14 =====
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 17 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== EvoBot1 won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 10 =====
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 13 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== EvoBot1 won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 25 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== EvoBot1 won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 13 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== EvoBot1 won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 30 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
+
+===== EvoBot1 won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <EvoBot1> vs <Dumbestbot> with memory tape size: 25 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128< | >0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128 ]
 
 ===== EvoBot1 won the battle after 1 cycles =====
 

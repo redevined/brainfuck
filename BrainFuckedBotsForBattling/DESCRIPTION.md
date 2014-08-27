@@ -10,52 +10,62 @@ Scoreboard
 
     |       Owner        |         Bot           Score |
     |--------------------|-----------------------------|
-    | Sylwester          | BurlyBalder         -  356  |
-    | Comintern          | CounterPunch        -  352  |
-    | IstvanChung        | Bigger              -  341  |
-    | AndoDaan           | BeatYouMate         -  332  |
-    | MikaLammi          | WallE               -  317  |
-    | ccarton            | AnybodyThere        -  303  |
-    | Sparr              | SeeSawRush          -  302  |
-    | kaine              | SternBot            -  289  |
-    | PhiNotPi           | EvoBot2             -  288  |
-    | PhiNotPi           | RandomOscillator    -  273  |
-    | Sylwester          | TerribleThor        -  269  |
-    | Nax                | TruthBot            -  267  |
-    | DLosc              | LightfootPlodder    -  267  |
-    | DLosc              | Plodder             -  265  |
-    | PhiNotPi           | EvoBot1             -  263  |
-    | MikaLammi          | PolarBear           -  236  |
-    | Moop               | Alternator          -  232  |
-    | TestBot            | DecoyBot            -  218  |
-    | Geobits            | Backtracker         -  208  |
-    | TestBot            | FastClearBot        -  202  |
-    | Sylwester          | ReluctantRan        -  197  |
-    | frederick          | 128Bot              -  195  |
-    | IngoBuerk          | Geronimo            -  182  |
-    | plannapus          | CleanUpOnAisleSix   -  158  |
-    | PhiNotPi           | CloakingDeviceBot   -  157  |
-    | flawr              | CropCircleBot       -  154  |
-    | kaine              | BestOffense         -  141  |
-    | PhiNotPi           | CantTouchThis       -  137  |
-    | isaacg             | CleverAndDetermined -  135  |
-    | DLosc              | ScaredyBot          -  125  |
-    | AndoDaan           | GetOffMate          -  125  |
-    | Moop               | StubbornBot         -  122  |
-    | IngoBuerk          | Gambler             -  110  |
-    | BetaDecay          | RussianRoulette     -  103  |
-    | flawr              | DoNothingBot        -  103  |
-    | mmphilips          | PacifistBot         -  101  |
-    | SebastianLamerichs | Dumbot              -  99   |
-    | SeanD              | DontUnderstand      -  76   |
-    | Darkgamma          | TheRetard           -  69   |
-    | frederick          | Dumberbot           -  62   |
-    | proudHaskeller     | PatientBot          -  60   |
-    | flawr              | MetaJSRandomBot     -  54   |
-    | BetaDecay          | PrussianRoulette    -  28   |
+    | Sylwester          | BurlyBalderV2       -  456  |
+    | Comintern          | CounterPunch        -  449  |
+    | Sp3000             | YandereBot          -  422  |
+    | DLosc              | LightfootPlodder    -  410  |
+    | Manu               | DecoyMaster         -  397  |
+    | MikaLammi          | WallE2.0            -  383  |
+    | AndoDaan           | BeatYouMate         -  383  |
+    | IstvanChung        | Bigger              -  377  |
+    | Sparr              | SeeSawRush          -  359  |
+    | Sylwester          | TerribleThor        -  358  |
+    | ccarton            | AnybodyThere        -  353  |
+    | Brilliand          | TimedAttack         -  345  |
+    | PhiNotPi           | EvoBot1             -  344  |
+    | PhiNotPi           | RandomOscillator    -  343  |
+    | PhiNotPi           | EvoBot2             -  339  |
+    | kaine              | SternBot            -  335  |
+    | DLosc              | Plodder             -  333  |
+    | Nax                | TruthBot            -  318  |
+    | MikaLammi          | PolarBearMkII       -  313  |
+    | AndoDaan           | PrimesAndWonders    -  312  |
+    | Moop               | Alternator          -  303  |
+    | weston             | FastTrapClearBot    -  283  |
+    | TestBot            | DecoyBot            -  282  |
+    | icedvariables      | PyBot               -  271  |
+    | TestBot            | FastClearBot        -  256  |
+    | Geobits            | Backtracker         -  252  |
+    | Sylwester          | ReluctantRan        -  242  |
+    | frederick          | 128Bot              -  232  |
+    | IngoBuerk          | Geronimo            -  228  |
+    | flawr              | CropCircleBot       -  206  |
+    | plannapus          | CleanUpOnAisleSix   -  205  |
+    | kaine              | BestOffense         -  195  |
+    | AndoDaan           | EndTitled           -  187  |
+    | Comintern          | 2BotsOneCup         -  186  |
+    | PhiNotPi           | CloakingDeviceBot   -  178  |
+    | PhiNotPi           | CantTouchThis       -  176  |
+    | isaacg             | CleverAndDetermined -  168  |
+    | AndoDaan           | GetOffMate          -  166  |
+    | DLosc              | ScaredyBot          -  158  |
+    | Cruncher           | StallBot            -  155  |
+    | Moop               | StubbornBot         -  138  |
+    | BetaDecay          | RussianRoulette     -  132  |
+    | IngoBuerk          | Gambler             -  128  |
+    | flawr              | DoNothingBot        -  122  |
+    | mmphilips          | PacifistBot         -  118  |
+    | SebastianLamerichs | Dumbot              -  116  |
+    | SeanD              | DontUnderstand      -  100  |
+    | proudHaskeller     | PatientBot          -  83   |
+    | Darkgamma          | TheRetard           -  75   |
+    | flawr              | MetaJSRandomBot     -  70   |
+    | frederick          | Dumberbot           -  61   |
+    | BetaDecay          | PrussianRoulette    -  35   |
+    | BetaDecay          | Roomba              -  0    |
     | frederick          | Dumbestbot          -  0    |
 
-_Scores from 25.08.2014, next round will be today (27.08.), 3pm UTC+2!_
+_Scores from 27.08.2014_
 
 __EDIT5__: Implemented Abbreviation handling into the controller, no huge runtimes anymore. __This has the side effect that numbers and parentheses are not treated as comments anymore.__ You can still use them if you want to provide an annotated version, but it would be very helpful if there would be __also an uncommented version of your code__, so I don't need to remove the comments manually. Thanks!
 
@@ -113,7 +123,7 @@ Rules
 Your post should contain a name for your bot and its code.
 
 * You can use the following abbreviation syntax to make your code more readable:
- * e.g. `(+)*4` is the same as `++++`, this is valid for any instruction (also `[` and `]`)
+ * e.g. `(+)*4` is the same as `++++`, this is valid for any instruction __except unmatched brackets in parentheses__ since the loop logic collides with the abbreviation logic. Please use `[-[-[-` instead of `([-)*3`
 * Every other character than `+-><[].` is a comment and therefore ignored, except `()*` for abbreviations
 
 Bots which do not follow the rules will excluded from the tournament.

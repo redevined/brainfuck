@@ -6,7 +6,6 @@ Backtracker.bf Geobits
 BeatYouMate.bf AndoDaan
 BestOffense.bf kaine
 Bigger.bf IstvanChung
-BurlyBalder.bf Sylwester
 BurlyBalderV2.bf Sylwester
 CantTouchThis.bf PhiNotPi
 CleanUpOnAisleSix.bf plannapus
@@ -51,5 +50,5 @@ TerribleThor.bf Sylwester
 TheRetard.bf Darkgamma
 TimedAttack.bf Brilliand
 TruthBot.bf Nax
-WallE2.bf MikaLammi
+WallE2.0.bf MikaLammi
 YandereBot.bf Sp3000

@@ -1,7 +1,16 @@
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 16 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 23 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== CleverAndDetermined won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 25 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 
@@ -16,10 +25,19 @@
 
 
 
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 22 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 18 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== CleverAndDetermined won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 17 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 
@@ -34,55 +52,37 @@
 
 
 
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 26 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 22 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== CleverAndDetermined won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 12 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 30 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 21 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== CleverAndDetermined won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 30 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 26 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 22 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 12 =====
+===== Starting battle of <Dumbestbot> vs <CleverAndDetermined> with memory tape size: 27 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== CleverAndDetermined won the battle after 1 cycles =====
 

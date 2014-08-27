@@ -1,12 +1,3 @@
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 21 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== PatientBot won the battle after 1 cycles =====
-
-
-
 ===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 10 =====
 
 [ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
@@ -16,46 +7,19 @@
 
 
 
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 22 =====
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 11 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== PatientBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 25 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== PatientBot won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 27 =====
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 26 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== PatientBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 30 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== PatientBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 13 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== PatientBot won the battle after 1 cycles =====
 
@@ -70,19 +34,55 @@
 
 
 
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 27 =====
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 10 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== PatientBot won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 30 =====
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 18 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== PatientBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 16 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== PatientBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 18 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== PatientBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 11 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+
+===== PatientBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <PatientBot> with memory tape size: 21 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
 
 ===== PatientBot won the battle after 1 cycles =====
 
