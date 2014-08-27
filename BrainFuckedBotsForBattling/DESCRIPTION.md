@@ -55,13 +55,17 @@ Scoreboard
     | BetaDecay          | PrussianRoulette    -  28   |
     | frederick          | Dumbestbot          -  0    |
 
-_Scores from 25.08.2014_
+_Scores from 25.08.2014, next round will be today (27.08.), 3pm UTC+2!_
+
+__EDIT5__: Implemented Abbreviation handling into the controller, no huge runtimes anymore. __This has the side effect that numbers and parentheses are not treated as comments anymore.__ You can still use them if you want to provide an annotated version, but it would be very helpful if there would be __also an uncommented version of your code__, so I don't need to remove the comments manually. Thanks!
+
+__EDIT4__: Changed the title, because the tournament got removed from the hot network questions. Thanks to @Geobits for pointing this out!
+
+__EDIT3__: Removed comments in bf programs, due to an unexpected result, should be fixed now. If anyone has a problem with removing his comments, please report.
+
+__EDIT2__: Since it caused an arcane runtime on my quite slow computer, I reduced the timeout limit from 100000 cycles to 10000 cycles. Not that anyone has turned the resultof a running game beyond this point anyway.
 
 __EDIT1__: Fixed a bug in the convert script causing the interpreter to not ignore numbers in commented programs.
-
-__EDIT2__: Since it caused an arcane runtime on my quite slow computer, I reduced the timeout limit from 100000 cycles to 10000 cycles. Not that anyone has turned the resultof a running game beyond this point anyway. If your bot has a strategy which requires a higher limit, please just start complaining ^^
-
-__EDIT3__: Removed comments in bf programs, due to an unexpected result, should be fixed now. If anyone has a problem with removing his comments, please report. I haven't found the time to revise the interpreter for treating abbreviations himself, will do this in future round.
 
 ---
 
@@ -88,7 +92,7 @@ Each bot starts at his own flag, which is cell [0] from his own perspective. The
 	   ^											 ^
 	my bot										 other bot
 
-Both bots execute their action simultaneously, this is considered one cycle. The game ends after 10000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
+Both bots execute their action simultaneously, this is considered one cycle. The game ends after 100000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
 
 ---
 
@@ -96,6 +100,7 @@ Winning conditions
 ------------------
 
 Your bot wins under one of the following conditions:
+
 * Your enemy's flag is zeroed before yours
 * Your enemy moves his pointer out of the tape (executes `>` on your flag or `<` on his own)
 * Your flag's value is more far away from 0 than the value of your opponent's flag after 10000 cycles
@@ -108,7 +113,7 @@ Rules
 Your post should contain a name for your bot and its code.
 
 * You can use the following abbreviation syntax to make your code more readable:
- * E.g. `(+)*4` is the same as `++++`, this is valid for any instruction (also `[` and `]`)
+ * e.g. `(+)*4` is the same as `++++`, this is valid for any instruction (also `[` and `]`)
 * Every other character than `+-><[].` is a comment and therefore ignored, except `()*` for abbreviations
 
 Bots which do not follow the rules will excluded from the tournament.
@@ -135,7 +140,7 @@ Control program
 You can find the [control program](https://github.com/redevined/brainfuck/tree/master/BrainFuckedBotsForBattling) on github, along with the full logs from the battles.
 The leaderboard will be posted here once it is generated.
 
-Feel free to clone the repository and try your bot against the others on your own. Use `python Arena.py yourbot.bf otherbot.bf -c` to run a match. You can modify the conditions with the command-line flags `-m` and `-t`.
+Feel free to clone the repository and try your bot against the others on your own. Use `python Arena.py yourbot.bf otherbot.bf` to run a match. You can modify the conditions with the command-line flags `-m` and `-t`. If your terminal does not support ANSI escape sequences, use the `--no-color` flag to disable colored output.
 
 ---
 

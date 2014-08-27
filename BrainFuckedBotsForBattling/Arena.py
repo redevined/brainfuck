@@ -73,8 +73,8 @@ class Memory(object) :
 
 class Code(object) :
 	
-	def __init__(self, prog) :
-		self.code = [ char for char in open(prog).read() if char in "+-><[].()*0123456789" ]
+	def __init__(self, prog, raw) :
+		self.code = [ char for char in (prog if raw else open(prog).read()) if char in "+-><[].()*0123456789" ]
 		self.pos = 0
 		self.parens = self.matchBraces("(", ")")
 		self.counters = {}
@@ -132,9 +132,12 @@ def parseArguments() :
 	parser = argparse.ArgumentParser(description = "Arena program for the BrainFuckedBotsForBattling contest")
 
 	parser.add_argument("programs",
-		help = "The names of the two competing programs",
+		help = "BF program files or code (with -r)",
 		nargs = 2)
-	parser.add_argument("-m", "--memory-size",
+	parser.add_argument("-n", "--names",
+		help = "The names of the two competing programs, defaults to file names",
+		nargs = 2)
+	parser.add_argument("-s", "--memory-size",
 		help = "Select the size of the memory tape, defaults to random number in [10, 30]",
 		type = int,
 		default = random.randint(10, 30))
@@ -142,11 +145,17 @@ def parseArguments() :
 		help = "The number of cycles to complete before the game is considered a draw",
 		type = int,
 		default = 10000)
+	parser.add_argument("-r", "--raw",
+		help = " Provide programs directly as source code instead of filenames",
+		action = "store_true")
 	parser.add_argument("--no-color",
 		help = "Disable colored output",
 		action = "store_true")
 
 	args = parser.parse_args()
+	
+	if not args.names :
+		args.names = [name.rsplit("/")[-1].rsplit(".", 1)[0] for name in args.programs]
 	
 	return vars(args)
 
@@ -194,7 +203,7 @@ def main(params) :
 	}
 	
 	# Get the code of the programs (and convert extended Brainfuck to Brainfuck if necessary)
-	codes = [ Code(prog) for prog in params["programs"] ]
+	codes = [ Code(prog, params["raw"]) for prog in params["programs"] ]
 	
 	# Find matching loops and create dictionaries inside the memory instance
 	mem.loops = [code.matchBraces("[", "]") for code in codes]
@@ -223,12 +232,11 @@ def main(params) :
 if __name__ == "__main__" :
 	
 	args = parseArguments()
-	args["names"] = [name.rsplit("/")[-1].rsplit(".", 1)[0] for name in args["programs"]]
-	main(args)
-#	try :
-#		main(args)
-#	
-#	except Exception :
-#		raise SyntaxError("Invalid syntax")
+	
+	try :
+		main(args)
+	
+	except Exception :
+		raise SyntaxError("Invalid syntax")
 
 

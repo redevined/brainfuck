@@ -21,11 +21,12 @@ def generateScoreboard(owners, scores) :
 def main() :
 	
 	bots = dict( line.strip("\n").split(" ") for line in open("botlist.txt").readlines() )
-	scores = { key: 0 for key in bots }
+	code = { bot: open("bots/" + bot).read() for bot in bots }
+	scores = { bot: 0 for bot in bots }
 	
 	for fighters in itertools.combinations(bots, 2) :
 		
-		cmd = ["python", "Arena.py", "bots/" + fighters[0], "bots/" + fighters[1], "--no-color"]
+		cmd = ["python", "Arena.py", code[fighters[0]], code[fighters[1]], "-n", fighters[0].rsplit(".", 1)[0], fighters[1].rsplit(".", 1)[0], "--raw", "--no-color"]
 		results = [ capture(cmd).split("\n") for i in range(10) ]
 		score = [len([True for match in results if fighter.rsplit(".", 1)[0] in match[-2]]) for fighter in fighters]
 		
@@ -49,5 +50,7 @@ def main() :
 if __name__ == "__main__" :
 	
 	main()
+
+
 
 
