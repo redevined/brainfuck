@@ -41,7 +41,7 @@ def main() :
 		log.write(total)
 		log.close()
 		
-		print total
+		print(total)
 	
 	scoreboard = generateScoreboard(bots, scores)
 	open("SCOREBOARD.md", "w").write(scoreboard)
