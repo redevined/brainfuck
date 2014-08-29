@@ -1,43 +1,7 @@
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 10 =====
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 20 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== YandereBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 15 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== YandereBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 21 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== YandereBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 21 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== YandereBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 18 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
 
 ===== YandereBot won the battle after 1 cycles =====
 
@@ -46,16 +10,61 @@
 ===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 25 =====
 
 [ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
 
 ===== YandereBot won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 15 =====
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 28 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
+
+===== YandereBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 23 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
+
+===== YandereBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 29 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
+
+===== YandereBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 21 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
+
+===== YandereBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 10 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
+
+===== YandereBot won the battle after 1 cycles =====
+
+
+
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 18 =====
+
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
 
 ===== YandereBot won the battle after 1 cycles =====
 
@@ -64,25 +73,16 @@
 ===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 30 =====
 
 [ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
 
 ===== YandereBot won the battle after 1 cycles =====
 
 
 
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 13 =====
+===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 12 =====
 
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
-
-===== YandereBot won the battle after 1 cycles =====
-
-
-
-===== Starting battle of <Dumbestbot> vs <YandereBot> with memory tape size: 19 =====
-
-[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
-[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0< | >128 ]
+[ >128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 128< ]
+[ 128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | >-127< ]
 
 ===== YandereBot won the battle after 1 cycles =====
 

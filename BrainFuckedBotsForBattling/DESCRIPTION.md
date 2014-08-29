@@ -10,62 +10,68 @@ Scoreboard
 
     |       Owner        |         Bot           Score |
     |--------------------|-----------------------------|
-    | Sylwester          | BurlyBalderV2       -  456  |
-    | Comintern          | CounterPunch        -  449  |
-    | Sp3000             | YandereBot          -  422  |
-    | DLosc              | LightfootPlodder    -  410  |
-    | Manu               | DecoyMaster         -  397  |
-    | MikaLammi          | WallE2.0            -  383  |
-    | AndoDaan           | BeatYouMate         -  383  |
-    | IstvanChung        | Bigger              -  377  |
-    | Sparr              | SeeSawRush          -  359  |
-    | Sylwester          | TerribleThor        -  358  |
-    | ccarton            | AnybodyThere        -  353  |
-    | Brilliand          | TimedAttack         -  345  |
-    | PhiNotPi           | EvoBot1             -  344  |
-    | PhiNotPi           | RandomOscillator    -  343  |
-    | PhiNotPi           | EvoBot2             -  339  |
-    | kaine              | SternBot            -  335  |
-    | DLosc              | Plodder             -  333  |
-    | Nax                | TruthBot            -  318  |
-    | MikaLammi          | PolarBearMkII       -  313  |
-    | AndoDaan           | PrimesAndWonders    -  312  |
-    | Moop               | Alternator          -  303  |
-    | weston             | FastTrapClearBot    -  283  |
-    | TestBot            | DecoyBot            -  282  |
-    | icedvariables      | PyBot               -  271  |
-    | TestBot            | FastClearBot        -  256  |
-    | Geobits            | Backtracker         -  252  |
-    | Sylwester          | ReluctantRan        -  242  |
-    | frederick          | 128Bot              -  232  |
-    | IngoBuerk          | Geronimo            -  228  |
-    | flawr              | CropCircleBot       -  206  |
-    | plannapus          | CleanUpOnAisleSix   -  205  |
-    | kaine              | BestOffense         -  195  |
-    | AndoDaan           | EndTitled           -  187  |
-    | Comintern          | 2BotsOneCup         -  186  |
-    | PhiNotPi           | CloakingDeviceBot   -  178  |
-    | PhiNotPi           | CantTouchThis       -  176  |
-    | isaacg             | CleverAndDetermined -  168  |
-    | AndoDaan           | GetOffMate          -  166  |
-    | DLosc              | ScaredyBot          -  158  |
-    | Cruncher           | StallBot            -  155  |
-    | Moop               | StubbornBot         -  138  |
-    | BetaDecay          | RussianRoulette     -  132  |
-    | IngoBuerk          | Gambler             -  128  |
-    | flawr              | DoNothingBot        -  122  |
-    | mmphilips          | PacifistBot         -  118  |
-    | SebastianLamerichs | Dumbot              -  116  |
-    | SeanD              | DontUnderstand      -  100  |
-    | proudHaskeller     | PatientBot          -  83   |
-    | Darkgamma          | TheRetard           -  75   |
-    | flawr              | MetaJSRandomBot     -  70   |
-    | frederick          | Dumberbot           -  61   |
-    | BetaDecay          | PrussianRoulette    -  35   |
-    | BetaDecay          | Roomba              -  0    |
+    | LymiaAluysia       | NestDarwin          -  504  |
+    | Sp3000             | YandereBot          -  498  |
+    | Sylwester          | BurlyBalderV2       -  492  |
+    | Comintern          | CounterPunch        -  487  |
+    | IstvanChung        | Bigger              -  465  |
+    | DLosc              | LightfootPlodder    -  451  |
+    | Manu               | DecoyMaster         -  434  |
+    | AndoDaan           | BeatYouMate         -  421  |
+    | Mikescher          | MultiVAC            -  418  |
+    | Sparr              | SeeSawRush          -  410  |
+    | MikaLammi          | WallE2.0            -  401  |
+    | csarchon           | TheWallmaster       -  397  |
+    | ccarton            | AnybodyThere        -  393  |
+    | Comintern          | 2BotsOneCup         -  374  |
+    | PhiNotPi           | RandomOscillator    -  373  |
+    | PhiNotPi           | EvoBot2             -  372  |
+    | PhiNotPi           | EvoBot1             -  372  |
+    | kaine              | SternBot            -  359  |
+    | AndoDaan           | PrimesAndWonders    -  356  |
+    | Brilliand          | TimedAttack         -  354  |
+    | Sylwester          | TerribleThor        -  352  |
+    | DLosc              | Plodder             -  350  |
+    | Nax                | TruthBot            -  343  |
+    | Moop               | Alternator          -  315  |
+    | MikaLammi          | PolarBearMkII       -  308  |
+    | weston             | FastTrapClearBot    -  306  |
+    | Sp3000             | ParanoidBot         -  302  |
+    | TestBot            | DecoyBot            -  297  |
+    | icedvariables      | PyBot               -  284  |
+    | Geobits            | Backtracker         -  278  |
+    | TestBot            | FastClearBot        -  276  |
+    | Sylwester          | ReluctantRan        -  252  |
+    | IngoBuerk          | Geronimo            -  246  |
+    | frederick          | ConBot              -  243  |
+    | flawr              | CropCircleBot       -  231  |
+    | frederick          | 128Bot              -  231  |
+    | plannapus          | CleanUpOnAisleSix   -  227  |
+    | kaine              | BestOffense         -  225  |
+    | bornSwift          | ScribeBot           -  218  |
+    | PhiNotPi           | CantTouchThis       -  204  |
+    | AndoDaan           | EndTitled           -  197  |
+    | PhiNotPi           | CloakingDeviceBot   -  186  |
+    | isaacg             | CleverAndDetermined -  186  |
+    | DLosc              | ScaredyBot          -  185  |
+    | AndoDaan           | GetOffMate          -  179  |
+    | Cruncher           | StallBot            -  171  |
+    | Moop               | StubbornBot         -  168  |
+    | IngoBuerk          | Gambler             -  151  |
+    | BetaDecay          | RussianRoulette     -  133  |
+    | flawr              | DoNothingBot        -  133  |
+    | SebastianLamerichs | Dumbot              -  125  |
+    | mmphilips          | PacifistBot         -  104  |
+    | SeanD              | DontUnderstand      -  102  |
+    | proudHaskeller     | PatientBot          -  78   |
+    | flawr              | MetaJSRandomBot     -  68   |
+    | frederick          | Dumberbot           -  66   |
+    | BetaDecay          | Roomba              -  61   |
+    | Darkgamma          | TheRetard           -  60   |
+    | BetaDecay          | PrussianRoulette    -  24   |
     | frederick          | Dumbestbot          -  0    |
 
-_Scores from 27.08.2014_
+_Scores from 29.08.2014 - Next updates will will be less frequently_
 
 __EDIT5__: Implemented Abbreviation handling into the controller, no huge runtimes anymore. __This has the side effect that numbers and parentheses are not treated as comments anymore.__ You can still use them if you want to provide an annotated version, but it would be very helpful if there would be __also an uncommented version of your code__, so I don't need to remove the comments manually. Thanks!
 
@@ -102,7 +108,7 @@ Each bot starts at his own flag, which is cell [0] from his own perspective. The
 	   ^											 ^
 	my bot										 other bot
 
-Both bots execute their action simultaneously, this is considered one cycle. The game ends after 100000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
+Both bots execute their action simultaneously, this is considered one cycle. The game ends after 10000 cycles or as soon as one of the winning conditions is reached. If one of the programs reaches its end, it simply stops doing anthing until the end of the game, but can still win.
 
 ---
 
