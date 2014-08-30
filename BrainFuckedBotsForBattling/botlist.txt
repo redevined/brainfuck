@@ -11,6 +11,7 @@ CantTouchThis.bf PhiNotPi
 CleanUpOnAisleSix.bf plannapus
 CleverAndDetermined.bf isaacg
 CloakingDeviceBot.bf PhiNotPi
+ConBot.bf frederick
 CounterPunch.bf Comintern
 CropCircleBot.bf flawr
 DecoyBot.bf TestBot
@@ -30,7 +31,10 @@ Geronimo.bf IngoBuerk
 GetOffMate.bf AndoDaan
 LightfootPlodder.bf DLosc
 MetaJSRandomBot.bf flawr
+MultiVAC.bf Mikescher
+NestDarwin.bf LymiaAluysia
 PacifistBot.bf mmphilips
+ParanoidBot.bf Sp3000
 PatientBot.bf proudHaskeller
 Plodder.bf DLosc
 PolarBearMkII.bf MikaLammi
@@ -42,12 +46,14 @@ ReluctantRan.bf Sylwester
 Roomba.bf BetaDecay
 RussianRoulette.bf BetaDecay
 ScaredyBot.bf DLosc
+ScribeBot.bf bornSwift
 SeeSawRush.bf Sparr
 StallBot.bf Cruncher
 SternBot.bf kaine
 StubbornBot.bf Moop
 TerribleThor.bf Sylwester
 TheRetard.bf Darkgamma
+TheWallmaster.bf csarchon
 TimedAttack.bf Brilliand
 TruthBot.bf Nax
 WallE2.0.bf MikaLammi
