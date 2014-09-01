@@ -21,7 +21,7 @@ def generateScoreboard(owners, scores) :
 def main() :
 	
 	bots = dict( line.strip("\n").split(" ") for line in open("botlist.txt").readlines() )
-	code = { bot: open(os.path.join("bots", bot).read() + " " for bot in bots }
+	code = { bot: open(os.path.join("bots", bot)).read() + " " for bot in bots }
 	scores = { bot: 0 for bot in bots }
 	
 	for fighters in itertools.combinations(bots, 2) :
