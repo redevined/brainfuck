@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-import itertools
-import locale
+import itertools, locale, os
 from subprocess import check_output as capture
 
 
@@ -22,7 +21,7 @@ def generateScoreboard(owners, scores) :
 def main() :
 	
 	bots = dict( line.strip("\n").split(" ") for line in open("botlist.txt").readlines() )
-	code = { bot: open("bots/" + bot).read() + " " for bot in bots }
+	code = { bot: open(os.path.join("bots", bot)).read() + " " for bot in bots }
 	scores = { bot: 0 for bot in bots }
 	
 	for fighters in itertools.combinations(bots, 2) :
@@ -36,7 +35,7 @@ def main() :
 		
 		total = "===== {} vs. {} finished with {}:{} =====".format(*list(fighters) + score)
 		
-		log = open("logs/{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters]), "w")
+		log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
 		for res in results :
 			log.write("\n".join(res) + "\n\n\n")
 		log.write(total)
