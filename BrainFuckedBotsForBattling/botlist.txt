@@ -31,6 +31,7 @@ Geronimo.bf IngoBuerk
 GetOffMate.bf AndoDaan
 LightfootPlodder.bf DLosc
 MetaJSRandomBot.bf flawr
+Mickey.bf weston
 MultiVAC.bf Mikescher
 NestDarwin.bf LymiaAluysia
 PacifistBot.bf mmphilips
