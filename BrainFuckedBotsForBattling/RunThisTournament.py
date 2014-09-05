@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import itertools, os
+import itertools, locale, os
 from subprocess import check_output as capture
 
 
@@ -27,7 +27,7 @@ def main() :
 	for fighters in itertools.combinations(bots, 2) :
 		
 		cmd = ["python", "Arena.py", code[fighters[0]], code[fighters[1]], "-n", fighters[0].rsplit(".", 1)[0], fighters[1].rsplit(".", 1)[0], "--raw", "--no-color"]
-		results = [ capture(cmd).split("\n") for i in range(10) ]
+		results = [ capture(cmd).decode(locale.getdefaultlocale()[1]).split("\n") for i in range(10) ]
 		score = [len([True for match in results if fighter.rsplit(".", 1)[0] in match[-2]]) for fighter in fighters]
 		
 		for fig, sco in zip(fighters, score) :
@@ -41,7 +41,7 @@ def main() :
 		log.write(total)
 		log.close()
 		
-		print total
+		print(total)
 	
 	scoreboard = generateScoreboard(bots, scores)
 	open("SCOREBOARD.md", "w").write(scoreboard)

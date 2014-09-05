@@ -61,13 +61,13 @@ class Memory :
 			return self.loops.reverse()[cpos] + 1
 	
 	def write(self, cpos) :
-		s = chr(self.values[self.pointer]) if self.values[self.pointer] in [9, 10, 13] + range(32, 127) else ""
+		s = chr(self.values[self.pointer]) if self.values[self.pointer] in [9, 10, 13] + list(range(32, 127)) else ""
 		print(s, end="")
 		return cpos + 1
 	
 	def read(self, cpos) :
 		try :
-			val = ord(self.inpt.next())
+			val = ord(next(self.inpt))
 		except StopIteration :
 			val = 0
 		self.values[self.pointer] = val

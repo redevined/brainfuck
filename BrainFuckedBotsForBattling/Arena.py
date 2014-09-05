@@ -13,7 +13,7 @@ class Memory(object) :
 		self.no_color = no_color
 	
 	def __str__(self) :
-		s = map(str, self.values)
+		s = list(map(str, self.values))
 		p = self.pointers
 		if not self.no_color :
 			if p[0] == p[1] :
@@ -108,7 +108,7 @@ class Code(object) :
 	def get(self, pos) :
 		t = self[pos]
 		if t == "(" :	
-			if not self.counters.has_key(pos) :
+			if not pos in self.counters :
 				m = [ it for it in re.compile(r"\)\*(\d+)").finditer(str(self)) if it.start() == self.parens[1][pos] ][0]
 				c = int(m.group(1))
 				self.counters[pos] = [c, m.end()]
@@ -172,17 +172,17 @@ def finished(mem, c, clear = [[False, False]]) :
 	
 	if all(win) or timeout and not any(better) :
 		if not args["no_color"] :
-			print "\n===== \033[93mDraw\033[0m game ====="
+			print("\n===== \033[93mDraw\033[0m game =====")
 		else :
-			print "\n===== Draw game ====="
+			print("\n===== Draw game =====")
 		return True
 	
 	for i in (0, 1) :
 		if win[i] or timeout and better[i] :
 			if not args["no_color"] :
-				print "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["names"][i], c)
+				print("\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["names"][i], c))
 			else :
-				print "\n===== {} won the battle after {} cycles =====".format(args["names"][i], c)
+				print("\n===== {} won the battle after {} cycles =====".format(args["names"][i], c))
 			return True
 	
 	return False
@@ -208,11 +208,11 @@ def main(params) :
 	# Find matching loops and create dictionaries inside the memory instance
 	mem.loops = [code.matchBraces("[", "]") for code in codes]
 	
-	print "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"])
+	print("===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"]))
 	
 	# Get ready to rumble!
 	cycle = 0
-	print mem
+	print(mem)
 	
 	# Loop while none of the finishing conditions is  reached
 	while not finished(mem, cycle) :
@@ -225,7 +225,7 @@ def main(params) :
 		
 		# Increment cycle counter
 		cycle += 1
-		print mem
+		print(mem)
 
 
 
