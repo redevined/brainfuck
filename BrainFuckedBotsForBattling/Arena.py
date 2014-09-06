@@ -97,12 +97,12 @@ class Code(object) :
 		scope = 0
 		for (i, char) in enumerate(self.code) :
 			if char == opn :
-				scope += 1
+				scope -= 1
 				braces[i] = scope
 			elif char == cls :
 				ia = rbraces()[scope]
 				braces[ia] = i
-				scope -= 1
+				scope += 1
 		return rbraces(), braces
 		
 	def get(self, pos) :
