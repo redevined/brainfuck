@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import re, random, argparse
 
 
@@ -212,7 +213,7 @@ def main(params) :
 	
 	# Get ready to rumble!
 	cycle = 0
-	print(mem)
+	print(str(mem)) 
 	
 	# Loop while none of the finishing conditions is  reached
 	while not finished(mem, cycle) :
@@ -225,7 +226,18 @@ def main(params) :
 		
 		# Increment cycle counter
 		cycle += 1
-		print(mem)
+		print(str(mem))
+
+
+
+def tournament(data) :
+	
+	args["memory_size"] = random.randint(10, 30)
+	args.update(data)
+	
+	main(args)
+	
+	return print
 
 
 
@@ -233,10 +245,26 @@ if __name__ == "__main__" :
 	
 	args = parseArguments()
 	
-#	try :
-	main(args)
-#	
-#	except Exception :
-#		raise SyntaxError("Invalid syntax")
+	try :
+		main(args)
+	
+	except Exception :
+		raise SyntaxError("Invalid syntax")
+
+elif __name__ == "Arena" :
+	
+	class captureOutput(list) :
+	
+		def __call__(self, msg) :
+			self.append(msg)
+	
+	args = { 
+		"memory_size" : random.randint(10, 30),
+		"timeout" : 10000,
+		"raw" : True,
+		"no_color" : True
+	}
+	
+	print = captureOutput()
 
 

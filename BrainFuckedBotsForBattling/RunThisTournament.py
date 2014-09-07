@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import itertools, locale, os
-from subprocess import check_output as capture
+import itertools, os
+import Arena
 
 
 def generateScoreboard(owners, scores) :
@@ -26,20 +26,24 @@ def main() :
 	
 	for fighters in itertools.combinations(bots, 2) :
 		
-		cmd = ["python", "Arena.py", code[fighters[0]], code[fighters[1]], "-n", fighters[0].rsplit(".", 1)[0], fighters[1].rsplit(".", 1)[0], "--raw", "--no-color"]
-		results = [ capture(cmd).decode(locale.getdefaultlocale()[1]).split("\n") for i in range(10) ]
-		score = [len([True for match in results if fighter.rsplit(".", 1)[0] in match[-2]]) for fighter in fighters]
+		cmd = {
+			"programs" : [code[f] for f in fighters],
+			"names" : [f.rsplit(".", 1)[0] for f in fighters]
+		}
+		results = [ Arena.tournament(cmd) for _ in range(10) ]
+		score = [len([True for r in results if f.rsplit(".", 1)[0] in r[-1]]) for f in fighters]
 		
 		for fig, sco in zip(fighters, score) :
 			scores[fig] += sco
 		
 		total = "===== {} vs. {} finished with {}:{} =====".format(*list(fighters) + score)
 		
-		log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
-		for res in results :
-			log.write("\n".join(res) + "\n\n\n")
-		log.write(total)
-		log.close()
+		### Uncomment below to generate logs		
+#		log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
+#		for res in results :
+#			log.write("\n".join(res) + "\n\n\n")
+#		log.write(total)
+#		log.close()
 		
 		print(total)
 	

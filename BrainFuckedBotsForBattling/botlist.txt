@@ -6,7 +6,7 @@ Backtracker.bf Geobits
 BeatYouMate.bf AndoDaan
 BestOffense.bf kaine
 Bigger.bf IstvanChung
-BurlyBalderV2.bf Sylwester
+BurlyBalderV3.bf Sylwester
 CantTouchThis.bf PhiNotPi
 CleanUpOnAisleSix.bf plannapus
 CleverAndDetermined.bf isaacg
@@ -29,11 +29,13 @@ FastTrapClearBot.bf weston
 Gambler.bf IngoBuerk
 Geronimo.bf IngoBuerk
 GetOffMate.bf AndoDaan
+LethalLoke.bf Sylwester
 LightfootPlodder.bf DLosc
 MetaJSRandomBot.bf flawr
-Mickey.bf weston
+MickeyV3.bf weston
 MultiVAC.bf Mikescher
 NestDarwin.bf LymiaAluysia
+NyurokiMagicalFantasy.bf LymiaAluysia
 PacifistBot.bf mmphilips
 ParanoidBot.bf Sp3000
 PatientBot.bf proudHaskeller
@@ -43,7 +45,7 @@ PrimesAndWonders.bf AndoDaan
 PrussianRoulette.bf BetaDecay
 PyBot.bf icedvariables
 RandomOscillator.bf PhiNotPi
-ReluctantRan.bf Sylwester
+ReluctantRanV2.bf Sylwester
 Roomba.bf BetaDecay
 RussianRoulette.bf BetaDecay
 ScaredyBot.bf DLosc
@@ -52,7 +54,7 @@ SeeSawRush.bf Sparr
 StallBot.bf Cruncher
 SternBot.bf kaine
 StubbornBot.bf Moop
-TerribleThor.bf Sylwester
+TerribleThorV2.bf Sylwester
 TheRetard.bf Darkgamma
 TheWallmaster.bf csarchon
 TimedAttack.bf Brilliand
