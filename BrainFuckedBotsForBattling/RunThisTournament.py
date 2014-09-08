@@ -42,7 +42,7 @@ def main() :
 		if all(r.logs for r in results) :
 			log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
 			for res in results :
-				log.write("\n".join(res) + "\n\n\n")
+				log.write("\n".join(res.logs) + "\n\n\n")
 			log.write(total)
 			log.close()
 		
