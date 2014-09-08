@@ -30,20 +30,21 @@ def main() :
 			"programs" : [code[f] for f in fighters],
 			"names" : [f.rsplit(".", 1)[0] for f in fighters]
 		}
+		# Replace Arena.tournament(cmd) with Arena.tournament(cmd, True) to generate logs.
 		results = [ Arena.tournament(cmd) for _ in range(10) ]
-		score = [len([True for r in results if f.rsplit(".", 1)[0] in r[-1]]) for f in fighters]
+		score = [len([True for r in results if f.rsplit(".", 1)[0] == r.victor]) for f in fighters]
 		
 		for fig, sco in zip(fighters, score) :
 			scores[fig] += sco
 		
 		total = "===== {} vs. {} finished with {}:{} =====".format(*list(fighters) + score)
 		
-		### Uncomment below to generate logs		
-#		log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
-#		for res in results :
-#			log.write("\n".join(res) + "\n\n\n")
-#		log.write(total)
-#		log.close()
+		if all(r.logs for r in results) :
+			log = open(os.path.join("logs", "{}_vs_{}.log".format(*[f.rsplit(".", 1)[0] for f in fighters])), "w")
+			for res in results :
+				log.write("\n".join(res) + "\n\n\n")
+			log.write(total)
+			log.close()
 		
 		print(total)
 	
