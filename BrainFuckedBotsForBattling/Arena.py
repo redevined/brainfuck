@@ -169,7 +169,7 @@ def parseArguments() :
 
 def finished(params, mem, c, clear = [[False, False]]) :
 	
-	print = params["print_fn"]
+	print_fn = params["print_fn"]
 	
 	timeout = c >= params["timeout"]
 	
@@ -180,17 +180,17 @@ def finished(params, mem, c, clear = [[False, False]]) :
 	
 	if all(win) or timeout and not any(better) :
 		if not params["no_color"] :
-			print(lambda: "\n===== \033[93mDraw\033[0m game =====")
+			print_fn(lambda: "\n===== \033[93mDraw\033[0m game =====")
 		else :
-			print(lambda: "\n===== Draw game =====")
+			print_fn(lambda: "\n===== Draw game =====")
 		return True
 	
 	for i in (0, 1) :
 		if win[i] or timeout and better[i] :
 			if not params["no_color"] :
-				print(lambda: "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, params["names"][i], c))
+				print_fn(lambda: "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, params["names"][i], c))
 			else :
-				print(lambda: "\n===== {} won the battle after {} cycles =====".format(params["names"][i], c))
+				print_fn(lambda: "\n===== {} won the battle after {} cycles =====".format(params["names"][i], c))
 			return params["names"][i]
 	
 	return None
@@ -199,7 +199,7 @@ def finished(params, mem, c, clear = [[False, False]]) :
 
 def runGame(params) :
 	
-	print = params["print_fn"]
+	print_fn = params["print_fn"]
 	
 	# Initialize the memory tape
 	mem = Memory(params["memory_size"], params["no_color"])
@@ -220,11 +220,11 @@ def runGame(params) :
 	# Find matching loops and create dictionaries inside the memory instance
 	mem.loops = [code.matchBraces("[", "]") for code in codes]
 	
-	print(lambda: "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"]))
+	print_fn(lambda: "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"]))
 	
 	# Get ready to rumble!
 	cycle = 0
-	print(lambda: str(mem)) 
+	print_fn(lambda: str(mem)) 
 	
 	# Loop while none of the finishing conditions is  reached
 	while True :
@@ -237,7 +237,7 @@ def runGame(params) :
 		
 		# Increment cycle counter
 		cycle += 1
-		print(lambda: str(mem))
+		print_fn(lambda: str(mem))
 
 		result = finished(params, mem, cycle)
 		if result != None:
