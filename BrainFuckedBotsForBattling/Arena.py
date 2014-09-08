@@ -80,6 +80,11 @@ class Code(object) :
 		self.parens = self.matchBraces("(", ")")
 		self.counters = {}
 	
+	# TODO This is ugly, eventually move this state out of Code.
+	def reset(self) :
+		self.pos = 0
+		self.counters = {}
+	
 	def __str__(self) :
 		return str().join(self.code)
 	
@@ -162,9 +167,11 @@ def parseArguments() :
 
 
 
-def finished(mem, c, clear = [[False, False]]) :
+def finished(params, mem, c, clear = [[False, False]]) :
 	
-	timeout = c >= args["timeout"]
+	print_fn = params["print_fn"]
+	
+	timeout = c >= params["timeout"]
 	
 	win = [clear[0][t] and mem.values[t*-1] == 0 or mem.pointers[t] not in range(len(mem.values)) for t in (1, 0)]
 	better = [abs(mem.values[t*-1]) > abs(mem.values[t-1]) for t in (0, 1)]
@@ -172,25 +179,27 @@ def finished(mem, c, clear = [[False, False]]) :
 	clear[0] = [mem.values[t] == 0 for t in (0, -1)]
 	
 	if all(win) or timeout and not any(better) :
-		if not args["no_color"] :
-			print("\n===== \033[93mDraw\033[0m game =====")
+		if not params["no_color"] :
+			print_fn(lambda: "\n===== \033[93mDraw\033[0m game =====")
 		else :
-			print("\n===== Draw game =====")
+			print_fn(lambda: "\n===== Draw game =====")
 		return True
 	
 	for i in (0, 1) :
 		if win[i] or timeout and better[i] :
-			if not args["no_color"] :
-				print("\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, args["names"][i], c))
+			if not params["no_color"] :
+				print_fn(lambda: "\n===== \033[{}m{}\033[0m won the battle after {} cycles =====".format(91+i, params["names"][i], c))
 			else :
-				print("\n===== {} won the battle after {} cycles =====".format(args["names"][i], c))
-			return True
+				print_fn(lambda: "\n===== {} won the battle after {} cycles =====".format(params["names"][i], c))
+			return params["names"][i]
 	
-	return False
+	return None
 
 
 
-def main(params) :
+def runGame(params) :
+	
+	print_fn = params["print_fn"]
 	
 	# Initialize the memory tape
 	mem = Memory(params["memory_size"], params["no_color"])
@@ -204,19 +213,21 @@ def main(params) :
 	}
 	
 	# Get the code of the programs (and convert extended Brainfuck to Brainfuck if necessary)
-	codes = [ Code(prog, params["raw"]) for prog in params["programs"] ]
+	codes = [ Code(prog, params["raw"]) if not type(prog) == Code else prog for prog in params["programs"] ]
+	for prog in codes:
+		prog.reset()
 	
 	# Find matching loops and create dictionaries inside the memory instance
 	mem.loops = [code.matchBraces("[", "]") for code in codes]
 	
-	print("===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"]))
+	print_fn(lambda: "===== Starting battle of <{1}> vs <{2}> with memory tape size: {0} =====\n".format(params["memory_size"], *params["names"]))
 	
 	# Get ready to rumble!
 	cycle = 0
-	print(str(mem)) 
+	print_fn(lambda: str(mem)) 
 	
 	# Loop while none of the finishing conditions is  reached
-	while not finished(mem, cycle) :
+	while True :
 		
 		for code in codes :
 			code.instr = code.get(code.pos)
@@ -226,45 +237,47 @@ def main(params) :
 		
 		# Increment cycle counter
 		cycle += 1
-		print(str(mem))
+		print_fn(lambda: str(mem))
+
+		result = finished(params, mem, cycle)
+		if result != None:
+			if result == True:
+				return None
+			else:
+				return result
 
 
+class TournamentResults(object):
 
-def tournament(data) :
+	def __init__(self, victor, logs):
+		self.victor = victor
+		self.logs   = logs
+
+
+def tournament(data, log = False) :
 	
-	args["memory_size"] = random.randint(10, 30)
+	capture = [] if log else None
+	args = { 
+		"memory_size" : random.randint(10, 30),
+		"timeout" : 10000,
+		"raw" : True,
+		"no_color" : True,
+		"print_fn" : (lambda x: None) if not log else (lambda x: capture.append(str(x())))
+	}
 	args.update(data)
 	
-	main(args)
-	
-	return print
+	return TournamentResults(runGame(args), capture)
 
 
 
 if __name__ == "__main__" :
 	
 	args = parseArguments()
+	args["print_fn"] = lambda x: print(x())
 	
 	try :
-		main(args)
+		runGame(args)
 	
 	except Exception :
 		raise SyntaxError("Invalid syntax")
-
-elif __name__ == "Arena" :
-	
-	class captureOutput(list) :
-	
-		def __call__(self, msg) :
-			self.append(msg)
-	
-	args = { 
-		"memory_size" : random.randint(10, 30),
-		"timeout" : 10000,
-		"raw" : True,
-		"no_color" : True
-	}
-	
-	print = captureOutput()
-
 
