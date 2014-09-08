@@ -232,9 +232,10 @@ def main(params) :
 
 def tournament(data) :
 	
-	args["memory_size"] = random.randint(10, 30)
+	data["memory_size"] = random.randint(10, 30)
 	args.update(data)
 	
+	print.__init__()
 	main(args)
 	
 	return print
@@ -258,13 +259,13 @@ elif __name__ == "Arena" :
 		def __call__(self, msg) :
 			self.append(msg)
 	
-	args = { 
-		"memory_size" : random.randint(10, 30),
+	args = {
 		"timeout" : 10000,
 		"raw" : True,
 		"no_color" : True
 	}
 	
+	debug = print
 	print = captureOutput()
 
 

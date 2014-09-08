@@ -30,7 +30,7 @@ def main() :
 			"programs" : [code[f] for f in fighters],
 			"names" : [f.rsplit(".", 1)[0] for f in fighters]
 		}
-		results = [ Arena.tournament(cmd) for _ in range(10) ]
+		results = [ Arena.tournament(cmd)[:] for _ in range(10) ]
 		score = [len([True for r in results if f.rsplit(".", 1)[0] in r[-1]]) for f in fighters]
 		
 		for fig, sco in zip(fighters, score) :
