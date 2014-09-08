@@ -264,7 +264,6 @@ def tournament(data, log = False) :
 		"no_color" : True,
 		"print_fn" : (lambda x: None) if not log else (lambda x: capture.append(str(x())))
 	}
-	args["memory_size"] = random.randint(10, 30)
 	args.update(data)
 	
 	return TournamentResults(runGame(args), capture)
