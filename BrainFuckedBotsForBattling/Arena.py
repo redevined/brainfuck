@@ -80,6 +80,11 @@ class Code(object) :
 		self.parens = self.matchBraces("(", ")")
 		self.counters = {}
 	
+	# TODO This is ugly, eventually move this state out of Code.
+	def reset(self) :
+		self.pos = 0
+		self.counters = {}
+	
 	def __str__(self) :
 		return str().join(self.code)
 	
@@ -208,7 +213,9 @@ def runGame(params) :
 	}
 	
 	# Get the code of the programs (and convert extended Brainfuck to Brainfuck if necessary)
-	codes = [ Code(prog, params["raw"]) for prog in params["programs"] ]
+	codes = [ Code(prog, params["raw"]) if not type(prog) == Code else prog for prog in params["programs"] ]
+	for prog in codes:
+		prog.reset()
 	
 	# Find matching loops and create dictionaries inside the memory instance
 	mem.loops = [code.matchBraces("[", "]") for code in codes]
