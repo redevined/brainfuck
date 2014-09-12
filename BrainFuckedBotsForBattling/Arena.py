@@ -94,17 +94,17 @@ class Code(object) :
 	
 	def matchBraces(self, opn, cls) :
 		braces = {}
-		rbraces = lambda : dict(zip(braces.values(), braces.keys()))
+		rev = lambda dt : dict(zip(dt.values(), dt.keys()))
 		scope = 0
 		for (i, char) in enumerate(self.code) :
 			if char == opn :
 				scope -= 1
 				braces[i] = scope
 			elif char == cls :
-				ia = rbraces()[scope]
+				ia = rev(braces)[scope]
 				braces[ia] = i
 				scope += 1
-		return rbraces(), braces
+		return rev(braces), braces
 		
 	def get(self, pos) :
 		t = self[pos]

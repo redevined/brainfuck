@@ -32,7 +32,7 @@ GetOffMate.bf AndoDaan
 LethalLoke.bf Sylwester
 LightfootPlodder.bf DLosc
 MetaJSRandomBot.bf flawr
-MickeyV3.bf weston
+MickeyV4.bf weston
 MultiVAC.bf Mikescher
 NestDarwin.bf LymiaAluysia
 NyurokiMagicalFantasy.bf LymiaAluysia
