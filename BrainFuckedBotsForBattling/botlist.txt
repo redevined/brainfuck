@@ -29,6 +29,7 @@ FastTrapClearBot.bf weston
 Gambler.bf IngoBuerk
 Geronimo.bf IngoBuerk
 GetOffMate.bf AndoDaan
+LethalLokeV2.1.bf Sylwester
 LightfootPlodder.bf DLosc
 MetaJSRandomBot.bf flawr
 MetalDetector.bf Timtech
