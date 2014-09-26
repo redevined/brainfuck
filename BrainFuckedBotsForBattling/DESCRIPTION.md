@@ -10,73 +10,73 @@ Scoreboard
 
     |       Owner        |          Bot            Score |
     |--------------------|-------------------------------|
-    | Sylwester          | LethalLokeV2.1        -  570  |
-    | LymiaAluysia       | NyurokiMagicalFantasy -  562  |
-    | weston             | MickeyV4              -  538  |
-    | Sp3000             | YandereBot            -  509  |
-    | Comintern          | CounterPunch          -  505  |
-    | Sylwester          | BurlyBalderV3         -  505  |
+    | Sylwester          | LethalLokeV2.1        -  579  |
+    | LymiaAluysia       | NyurokiMagicalFantasy -  565  |
+    | weston             | MickeyV4              -  553  |
+    | Sylwester          | BurlyBalderV3         -  514  |
+    | Comintern          | CounterPunch          -  510  |
+    | Sp3000             | YandereBot            -  502  |
     | LymiaAluysia       | NestDarwin            -  493  |
-    | Sylwester          | TerribleThorV2        -  463  |
-    | DLosc              | LightfootPlodder      -  461  |
-    | IstvanChung        | Bigger                -  459  |
-    | Manu               | DecoyMaster           -  456  |
-    | Timtech            | MetalDetector         -  434  |
-    | Mikescher          | MultiVAC              -  425  |
-    | MikaLammi          | WallE2.0              -  419  |
-    | AndoDaan           | BeatYouMate           -  415  |
-    | csarchon           | TheWallmaster         -  407  |
-    | ccarton            | AnybodyThere          -  406  |
+    | Manu               | DecoyMaster           -  472  |
+    | IstvanChung        | Bigger                -  465  |
+    | Sylwester          | TerribleThorV2        -  455  |
+    | DLosc              | LightfootPlodder      -  453  |
+    | Timtech            | MetalDetector         -  438  |
+    | Mikescher          | MultiVAC              -  428  |
+    | csarchon           | TheWallmaster         -  415  |
+    | MikaLammi          | WallE2.0              -  412  |
+    | AndoDaan           | BeatYouMate           -  407  |
+    | ccarton            | AnybodyThere          -  404  |
     | Sparr              | SeeSawRush            -  396  |
-    | PhiNotPi           | RandomOscillator      -  383  |
-    | Comintern          | 2BotsOneCup           -  380  |
-    | Sylwester          | ReluctantRanV2        -  377  |
-    | kaine              | SternBot              -  364  |
-    | PhiNotPi           | EvoBot1               -  363  |
-    | PhiNotPi           | EvoBot2               -  362  |
-    | AndoDaan           | PrimesAndWonders      -  360  |
-    | Brilliand          | TimedAttack           -  356  |
-    | DLosc              | Plodder               -  348  |
-    | Nax                | TruthBot              -  346  |
-    | MikaLammi          | PolarBearMkII         -  322  |
-    | Sp3000             | ParanoidBot           -  317  |
-    | Moop               | Alternator            -  308  |
+    | Comintern          | 2BotsOneCup           -  378  |
+    | PhiNotPi           | RandomOscillator      -  373  |
+    | Sylwester          | ReluctantRanV2        -  371  |
+    | PhiNotPi           | EvoBot2               -  370  |
+    | Brilliand          | TimedAttack           -  367  |
+    | kaine              | SternBot              -  367  |
+    | AndoDaan           | PrimesAndWonders      -  366  |
+    | PhiNotPi           | EvoBot1               -  361  |
+    | DLosc              | Plodder               -  332  |
+    | Nax                | TruthBot              -  328  |
+    | Sp3000             | ParanoidBot           -  309  |
+    | MikaLammi          | PolarBearMkII         -  307  |
+    | Moop               | Alternator            -  306  |
     | weston             | FastTrapClearBot      -  305  |
-    | icedvariables      | PyBot                 -  294  |
-    | TestBot            | FastClearBot          -  285  |
-    | kaine              | BestOffense           -  280  |
-    | TestBot            | DecoyBot              -  274  |
-    | Geobits            | Backtracker           -  269  |
-    | IngoBuerk          | Geronimo              -  252  |
-    | AndoDaan           | EndTitled             -  247  |
-    | frederick          | ConBot                -  240  |
-    | frederick          | 128Bot                -  239  |
-    | flawr              | CropCircleBot         -  228  |
-    | bornSwift          | ScribeBot             -  224  |
+    | kaine              | BestOffense           -  298  |
+    | TestBot            | DecoyBot              -  295  |
+    | icedvariables      | PyBot                 -  284  |
+    | bornSwift          | ScribeBot             -  278  |
+    | Geobits            | Backtracker           -  270  |
+    | TestBot            | FastClearBot          -  264  |
+    | IngoBuerk          | Geronimo              -  257  |
+    | flawr              | CropCircleBot         -  236  |
+    | frederick          | 128Bot                -  236  |
+    | frederick          | ConBot                -  229  |
     | plannapus          | CleanUpOnAisleSix     -  218  |
-    | PhiNotPi           | CantTouchThis         -  207  |
-    | PhiNotPi           | CloakingDeviceBot     -  198  |
-    | DLosc              | ScaredyBot            -  195  |
+    | AndoDaan           | EndTitled             -  207  |
+    | PhiNotPi           | CantTouchThis         -  206  |
+    | DLosc              | ScaredyBot            -  198  |
+    | PhiNotPi           | CloakingDeviceBot     -  191  |
+    | AndoDaan           | GetOffMate            -  187  |
     | isaacg             | CleverAndDetermined   -  183  |
-    | Cruncher           | StallBot              -  175  |
-    | Moop               | StubbornBot           -  170  |
-    | AndoDaan           | GetOffMate            -  165  |
-    | IngoBuerk          | Gambler               -  155  |
-    | BetaDecay          | RussianRoulette       -  134  |
-    | flawr              | DoNothingBot          -  130  |
-    | SebastianLamerichs | Dumbot                -  125  |
-    | mmphilips          | PacifistBot           -  116  |
-    | SeanD              | DontUnderstand        -  107  |
-    | proudHaskeller     | PatientBot            -  75   |
+    | Moop               | StubbornBot           -  181  |
+    | Cruncher           | StallBot              -  181  |
+    | IngoBuerk          | Gambler               -  148  |
+    | SebastianLamerichs | Dumbot                -  127  |
+    | BetaDecay          | RussianRoulette       -  123  |
+    | flawr              | DoNothingBot          -  123  |
+    | mmphilips          | PacifistBot           -  111  |
+    | SeanD              | DontUnderstand        -  93   |
+    | frederick          | Dumberbot             -  72   |
+    | proudHaskeller     | PatientBot            -  71   |
     | flawr              | MetaJSRandomBot       -  68   |
-    | frederick          | Dumberbot             -  68   |
-    | BetaDecay          | Roomba                -  67   |
-    | Darkgamma          | TheRetard             -  61   |
-    | BetaDecay          | PrussianRoulette      -  30   |
+    | Darkgamma          | TheRetard             -  66   |
+    | BetaDecay          | Roomba                -  66   |
+    | BetaDecay          | PrussianRoulette      -  29   |
     | frederick          | Dumbestbot            -  0    |
 
 
-_Scores from 22.09.2014 - Next update on friday_
+_Scores from 26.09.2014 - Next update on thursday_
 
 __EDIT6__: Discarded logs due to extreme size and runtime. You can generate them yourself by uncommenting the lines in `RunThisTournament.py`.
 
