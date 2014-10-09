@@ -80,7 +80,7 @@ Scoreboard
     | frederick          | Dumbestbot            -  0    |
 
 
-_Scores from 26.09.2014 - Next update on thursday_
+_Scores from 09.10.2014 - Next update maybe in the far future with more bots_
 
 __EDIT6__: Discarded logs due to extreme size and runtime. You can generate them yourself by uncommenting the lines in `RunThisTournament.py`.
 
