@@ -1,5 +1,6 @@
 128Bot.bf frederick
 2BotsOneCup.bf Comintern
+99BottlesOfBats.bf archaephyrryx
 Alternator.bf Moop
 AnybodyThere.bf ccarton
 Backtracker.bf Geobits
@@ -54,11 +55,14 @@ ScribeBot.bf bornSwift
 SeeSawRush.bf Sparr
 StallBot.bf Cruncher
 SternBot.bf kaine
+Stitcher.bf archaephyrryx
 StubbornBot.bf Moop
 TerribleThorV2.bf Sylwester
 TheRetard.bf Darkgamma
 TheWallmaster.bf csarchon
 TimedAttack.bf Brilliand
 TruthBot.bf Nax
+Twitcher.bf archaephyrryx
 WallE2.0.bf MikaLammi
+Wut.bf archaephyrryx
 YandereBot.bf Sp3000
