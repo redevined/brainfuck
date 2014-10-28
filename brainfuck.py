@@ -88,12 +88,17 @@ class Memory :
 
 def parseArguments() :
 	
-	parser = argparse.ArgumentParser(description = "Brainfuck interpreter, written in Python 2.7")
+	parser = argparse.ArgumentParser(description = """
+		Brainfuck interpreter, written in Python 2.7.
+		This implementation supports arbitrary high values and a dynamically growing memory tape.
+		Use the debugging mode to pause the execution of your programm and see what's going on.
+	""")
 
-	parser.add_argument("-f", "--file", help = "Take Brainfuck code from a file, you can only use either -c or -f")
-	parser.add_argument("-c", "--code", help = "Define the Brainfuck code directly, you can only use either -c or -f")
-	parser.add_argument("-i", "--input", help = "Define the input for your Brainfuck programm", default = "")
-	parser.add_argument("--debug", help = "If enabled, a '#' in your Brainfuck code will pause the programm and display debug information", nargs = "?", const = "#", default = False)
+	group = parser.add_mutually_exclusive_group(required = True)
+	group.add_argument("-f", "--file", help = "specify the path of the programm")
+	group.add_argument("-c", "--code", help = "define the Brainfuck code directly")
+	parser.add_argument("-i", "--input", help = "optionally define input for your programm", default = "")
+	parser.add_argument("--debug", help = "enables debugging through a specified token, defaults to '#'", nargs = "?", const = "#", default = False)
 
 	args = vars(parser.parse_args())
 	
