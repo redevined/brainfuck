@@ -81,7 +81,7 @@ class Memory :
 	
 	def __str__(self) :
 		s = map(str, self.values)
-		s[self.pointer] = "\033[92m" + s[self.pointer] + "\033[0m"
+		s[self.pointer] = "<" + s[self.pointer] + ">"
 		return "[ " + " | ".join(s) + " ]"
 			
 
@@ -93,7 +93,7 @@ def parseArguments() :
 	parser.add_argument("-f", "--file", help = "Take Brainfuck code from a file, you can only use either -c or -f")
 	parser.add_argument("-c", "--code", help = "Define the Brainfuck code directly, you can only use either -c or -f")
 	parser.add_argument("-i", "--input", help = "Define the input for your Brainfuck programm", default = "")
-	parser.add_argument("--debug", help = "If enabled, a '#' in your Brainfuck code will pause the programm and display debug information", action = "store_true")
+	parser.add_argument("--debug", help = "If enabled, a '#' in your Brainfuck code will pause the programm and display debug information", nargs = "?", const = "#", default = False)
 
 	args = vars(parser.parse_args())
 	
@@ -115,12 +115,12 @@ def main(prog) :
 		".": mem.write, ",": mem.read
 	}
 	if prog["debug"] :
-		controller["#"] = mem.debug
+		controller[prog["debug"]] = mem.debug
 	
 	code = [char for char in prog["code"] if char in controller]
 	
 	mem.loops = Loops( char for char in enumerate(code) if char[1] in "[]" )
-	mem.inpt = (char for char in prog["input"])
+	mem.inpt = ( char for char in prog["input"] )
 	
 	pos = 0
 	
