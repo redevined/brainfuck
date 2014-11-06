@@ -6,16 +6,18 @@ A Brainfuck interpreter, written in Python.
 Brainfuck is an esoteric programming language with an extremely minimalistic syntax. It is considered Turing complete.
 You can find a deeper explanation along with several examples on [Wikipedia](http://en.wikipedia.org/wiki/Brainfuck "Brainfuck on Wikipedia").
 
+__Important note on implementation:__ This implementation supports arbitrary high cell values and a dynamically growing memory tape. Therefore there's no wrapping for cells or the tape!
+
 Usage
 -----
 
-`python ./brainfuck.py [-h] [-c CODE|-f FILE] [-i INPUT] [--debug]`
+`python ./brainfuck.py [-h] [-c CODE|-f FILE] [-i INPUT] [--debug CHAR]`
 
 * `-h`      Display a help message and exits.  
-* `-c`      Lets you write brainfuck code directly into the terminal. Cannot be used with -f.  
-* `-f`      The programm takes the code from an external file with text-based format. Please write the absolute path to this file or store it in the same directory as brainfuck.py. Cannot be used with -c. 
+* `-c`      Pass your code as a command-line argument.
+* `-f`      The programm takes the code from an external file with text-based format.
 * `-i`      Define the input for your program.
-* `--debug` If enabled, a '#' in your brainfuck code will pause to running programm and display useful debugging information.
+* `--debug` If enabled, a '#' in your brainfuck code will pause to running programm and display useful debugging information. You can change the token by additionaly providing a single character.
 
 
 Python has to be installed in order to use it. To do so (Ubuntu):  
