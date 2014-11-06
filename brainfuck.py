@@ -101,10 +101,7 @@ def parseArguments() :
 	parser.add_argument("--debug", help = "enables debugging through a specified token, defaults to '#'", nargs = "?", const = "#", default = False)
 
 	args = vars(parser.parse_args())
-	
-	if args["file"] :
-		args["code"] = open(args["file"]).read()
-	del(args["file"])
+	args["code"] = args["code"] or open(args["file"]).read()
 	
 	return args
 
