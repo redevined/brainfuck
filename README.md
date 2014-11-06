@@ -27,7 +27,7 @@ Creating a useful alias:
 > `echo "alias brainfuck='python ~/replace/with/your/directory/brainfuck.py '" >> ~/.bash_aliases`
 
 With this one you can use:  
-> `brainfuck [-h] [-c CODE|-f FILE] [--debug]`
+> `brainfuck [-h] [-c CODE|-f FILE] [-i INPUT] [--debug CHAR]`
 
 
 Feel free to modify this code, report bugs, give advices to enhance it or ask questions about the source code (obviously I'm not *that* good at commenting my code).
